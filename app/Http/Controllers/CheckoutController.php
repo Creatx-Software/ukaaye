@@ -53,7 +53,7 @@ class CheckoutController extends Controller
 
         // Generate unique order code
         do {
-            $orderCode = 'ARO-' . strtoupper(Str::random(8));
+            $orderCode = 'U-' . strtoupper(Str::random(8));
         } while (Order::where('order_code', $orderCode)->exists());
 
         $order = Order::create([
