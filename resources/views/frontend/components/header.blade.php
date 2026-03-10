@@ -6,7 +6,7 @@
           <div class="phone-data">
             <div class="phone">
               <i class="flaticon-iphone"></i>
-              <span>Call Agent:</span><a href="callto:+18880002222">+1 888 000 2222</a>
+              <span>Call Agent:</span><a href="callto:+94777384992">+94777384992</a>
             </div>
             <div class="phone d-flax align-items-center">
               <i>
@@ -33,19 +33,23 @@
   <div class="bottom-bar">
     <div class="container">
         <div class="bottom-bar-text">
-          <a href="index.html"><img src="assets/img/logo/logo_bg_remove.png" alt="logo"></a>
+            <div class="logo" style="display:flex;align-items:center;gap:12px;">
+                <a href="{{ route('home') }}" style="display:flex;align-items:center;text-decoration:none;">
+                    <img src="assets/img/logo/logo_bg_remove.png" 
+                        alt="Ukaaye" 
+                        style="max-height:70px;width:auto;height:auto;vertical-align:middle;">
+                    <span style="display:none; font-family:'Poppins',sans-serif;font-size:28px;font-weight:700;color:#ffffff;letter-spacing:1px;line-height:1;">
+                        Ukaaye
+                    </span>
+                </a>
+            </div>
             <nav class="navbar">
                 <ul class="navbar-links">
-                    <li class="navbar-dropdown menu-item-children">
-                        <a href="#">Home</a>
-                        <ul class="sub-menu">
-                            <li><a href="index.html">home 1</a></li>
-                            <li><a href="index-2.html">home 2</a></li>
-                            <li><a href="index-3.html">home 3</a></li>
-                        </ul>
+                    <li class="navbar-dropdown">
+                        <a href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="navbar-dropdown">
-                        <a href="about.html">About</a>
+                        <a href="{{ route('about') }}">About</a>
                     </li>
                     <li class="navbar-dropdown menu-item-children">
                         <a href="#">Pages</a>
