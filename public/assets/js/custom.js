@@ -341,7 +341,7 @@ window.onload = calcScrollValue;
 /*-------------------- 11. project-slider ----------------------------*/
     var swiper = new Swiper(".project-slider", {
       slidesPerView: 4,
-      spaceBetween: 30,
+      spaceBetween: 50,
       loop: true,
       speed:1000,
       freeMode: true,
