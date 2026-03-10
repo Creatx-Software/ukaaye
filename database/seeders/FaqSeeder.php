@@ -14,52 +14,52 @@ class FaqSeeder extends Seeder
     {
         $faqs = [
             [
-                'question' => 'From what age can babies start eating Aromat products?',
-                'answer'   => '<p>All Aromat products are specially designed for babies from <strong>6 months</strong> onward, in line with WHO and Sri Lankan Ministry of Health guidelines for starting complementary feeding.</p>',
+                'question' => 'What types of products does Ukaaye supply?',
+                'answer'   => '<p>Ukaaye is Sri Lanka\'s leading provider of <strong>satellite systems, digital receivers, optical fiber cables, networking gear, and signal solutions</strong>. We supply everything from satellite dishes and LNBs to Cat6 cabling, fiber splicing equipment, routers, switches, and CCTV accessories — all under one roof.</p>',
             ],
             [
-                'question' => 'Are Aromat products free from added sugar and harmful additives?',
-                'answer'   => '<p>Yes! We are committed to <strong>no added sugar</strong>, no artificial colours, flavours, preservatives, or harmful additives. Our focus is on natural, wholesome ingredients suitable for little ones.</p>',
+                'question' => 'Do you offer island-wide delivery across Sri Lanka?',
+                'answer'   => '<p>Yes! We deliver to <strong>all districts island-wide</strong> — from Colombo and Kandy to Jaffna, Galle, Matara, Hambantota, Trincomalee, and beyond. Orders are dispatched promptly and we aim for delivery within the same week for most locations.</p>',
             ],
             [
-                'question' => 'Is Aromat baby food organic?',
-                'answer'   => '<p>We use carefully selected natural and organic-grade ingredients wherever possible. While not all products carry official organic certification yet, we prioritize clean, safe, and high-quality raw materials sourced responsibly.</p>',
+                'question' => 'Can technicians and contractors buy wholesale from Ukaaye?',
+                'answer'   => '<p>Absolutely. We cater to <strong>professional technicians, installers, and contractors</strong> with trade pricing and bulk order options. Contact our team for a trade account and pricing sheet for regular purchases.</p>',
             ],
             [
-                'question' => 'What ingredients do you use in your baby cereals and porridge?',
-                'answer'   => '<p>Our cereals feature local Sri Lankan superfoods such as <strong>kurakkan (finger millet)</strong>, red rice, rice flour, dhal, and natural fruit powders — gentle on tiny tummies and rich in natural nutrition.</p>',
+                'question' => 'What satellite dish size do I need for my location in Sri Lanka?',
+                'answer'   => '<p>For most Colombo and low-elevation areas a <strong>45 cm offset dish</strong> is sufficient for Measat-3 (91.5°E). For hill-country, southern, or northern regions a <strong>60 cm or larger dish</strong> is recommended for a stable signal. Our team can advise based on your exact location and target satellite.</p>',
             ],
             [
-                'question' => 'Do you deliver to Tangalle, Galle, Matara, or other areas in the South?',
-                'answer'   => '<p>Yes! We deliver island-wide, including <strong>Tangalle, Galle, Matara, Hambantota</strong>, and all other districts. Free delivery is available on orders above LKR 5,000 (delivery charges may apply for smaller orders).</p>',
+                'question' => 'Do you supply both single mode and multi mode fiber optic cable?',
+                'answer'   => '<p>Yes — we stock <strong>both single mode (OS2, yellow)</strong> for long-distance runs and <strong>multi mode (OM3/OM4, aqua)</strong> for shorter indoor/campus links. Available in 4-core, 8-core, 24-core, 48-core and higher counts, along with SC, LC, FC, and ST connectors.</p>',
             ],
             [
-                'question' => 'Are Aromat products suitable for babies with allergies?',
-                'answer'   => '<p>We do not add common allergens unnecessarily, but always check the label for specific ingredients. Start with small amounts and introduce one new product at a time. Consult your paediatrician if your baby has known allergies.</p>',
+                'question' => 'Are the products you sell genuine and under warranty?',
+                'answer'   => '<p>Yes. All products supplied by Ukaaye are <strong>genuine items with manufacturer warranties</strong>. We do not deal in counterfeit or grey-market goods, ensuring you get reliable performance and after-sales support.</p>',
             ],
             [
-                'question' => 'Where is Aromat baby food manufactured?',
-                'answer'   => '<p>Aromat is proudly <strong>made in Sri Lanka</strong> — manufactured right here in <strong>Piliyandala</strong>. We combine local production with careful import of select quality ingredients to keep prices affordable for Sri Lankan families.</p>',
+                'question' => 'Do you sell digital receivers compatible with Dialog and Airtel satellite services?',
+                'answer'   => '<p>We stock a range of digital receivers suitable for <strong>free-to-air (FTA), Dialog TV (Measat-3)</strong>, and other Sri Lankan satellite platforms. We also carry IPTV-capable and Android-based receivers. Contact us to confirm compatibility for your specific service.</p>',
             ],
             [
-                'question' => 'Can I use Aromat date powder or honey for babies?',
-                'answer'   => '<p>Our date powder is suitable from <strong>6 months</strong> as a natural sweetener alternative. Pure honey is recommended only from <strong>12 months</strong> onward (due to general infant botulism risk). Always follow age guidelines on packaging.</p>',
+                'question' => 'Can I get Cat6 and structured cabling supplies for office installations?',
+                'answer'   => '<p>Yes — we supply <strong>Cat6 UTP and FTP cable</strong>, patch panels, keystone jacks, RJ45 plugs, cable trays, and all accessories needed for complete structured cabling projects for offices, schools, hotels, and commercial buildings.</p>',
             ],
             [
-                'question' => 'Are your baby curry mixes mild enough for young children?',
-                'answer'   => '<p>Yes — our baby curry mixes are specially formulated to be <strong>very mild</strong>, with no chilli or strong spices. They use gentle Sri Lankan flavours like turmeric, coriander, and coconut to introduce taste safely.</p>',
+                'question' => 'Do you supply PoE switches and Wi-Fi access points?',
+                'answer'   => '<p>Yes. We stock <strong>PoE-capable gigabit switches</strong> in 8, 16, and 24-port configurations, as well as ceiling-mount and outdoor <strong>Wi-Fi access points (Wi-Fi 5 and Wi-Fi 6)</strong> from trusted brands — ideal for office, hotel, or campus deployments.</p>',
             ],
             [
-                'question' => 'Why is Aromat more affordable than imported baby food?',
-                'answer'   => '<p>By manufacturing locally in Piliyandala and keeping packaging simple, we eliminate high import costs and pass the savings directly to Sri Lankan parents — premium nutrition at an accessible price.</p>',
+                'question' => 'Do you provide technical support for products purchased from Ukaaye?',
+                'answer'   => '<p>Yes — our team provides <strong>expert technical support</strong> before and after your purchase. Whether you need help selecting the right product, troubleshooting a signal issue, or planning a network installation, we are happy to assist via phone, WhatsApp, or in-store.</p>',
             ],
             [
-                'question' => 'Do your products help with healthy growth and development?',
-                'answer'   => '<p>Absolutely. Our range (cereals, puffs, yogurts, drinks) is crafted with iron-rich grains, natural vitamins from fruits, probiotics in yogurt, and balanced nutrition to support brain development, immunity, and overall growth.</p>',
+                'question' => 'Can I order online and how long does delivery take?',
+                'answer'   => '<p>You can place orders via our website or contact us directly via phone/WhatsApp. <strong>Colombo and suburbs</strong> typically receive orders within 1–2 business days. <strong>Outstation deliveries</strong> are usually completed within 3–5 business days depending on the courier and location.</p>',
             ],
             [
-                'question' => 'How can I contact Aromat for more information or orders?',
-                'answer'   => '<p>You can reach us via our website, Facebook/Instagram, or WhatsApp. We\'re happy to help with product questions, orders, or advice for your little one!</p>',
+                'question' => 'How can I contact Ukaaye for orders or product enquiries?',
+                'answer'   => '<p>You can reach us through our website contact form, by phone, or on <strong>WhatsApp</strong>. Our team is available during business hours to assist with product selection, bulk pricing, order tracking, and technical advice. We are happy to help homes, businesses, and technicians alike.</p>',
             ],
         ];
 
@@ -73,6 +73,6 @@ class FaqSeeder extends Seeder
             );
         }
 
-        $this->command->info('Aromat FAQs seeded successfully! (' . count($faqs) . ' questions)');
+        $this->command->info('Ukaaye FAQs seeded successfully! (' . count($faqs) . ' questions)');
     }
 }

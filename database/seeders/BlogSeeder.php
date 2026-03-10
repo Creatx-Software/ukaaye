@@ -12,14 +12,14 @@ class BlogSeeder extends Seeder
 {
     public function run(): void
     {
-        // 1. Categories (same as before + one extra)
+        // 1. Categories
         $categories = [
-            ['name' => 'Baby Nutrition Tips', 'description' => 'Practical advice on feeding and nourishing your baby the healthy way.'],
-            ['name' => 'Parenting in Sri Lanka', 'description' => 'Challenges, joys, and local solutions for raising children in Sri Lanka.'],
-            ['name' => 'Aromat Stories', 'description' => 'Behind the scenes, our journey, values and what drives Aromat.'],
-            ['name' => 'Homemade Baby Food', 'description' => 'Simple, safe Sri Lankan-inspired recipes for babies 6+ months.'],
-            ['name' => 'Product Spotlights', 'description' => 'Learn more about our cereals, puffs, curry mixes, yogurts and more.'],
-            ['name' => 'Baby Development & Health', 'description' => 'Supporting growth, immunity, and milestones with good nutrition.'],
+            ['name' => 'Satellite Systems',       'description' => 'Guides, news, and tips on satellite TV systems, dish installation, and LNBs across Sri Lanka.'],
+            ['name' => 'Digital Receivers',        'description' => 'Reviews and setup guides for digital satellite receivers and set-top boxes.'],
+            ['name' => 'Optical Fiber & Cabling',  'description' => 'Everything about fiber optic cables, connectors, splicing, and network cabling solutions.'],
+            ['name' => 'Networking Gear',          'description' => 'Routers, switches, access points, and structured networking equipment for homes and businesses.'],
+            ['name' => 'Signal Solutions',         'description' => 'Signal boosters, amplifiers, splitters, and troubleshooting for clear reception.'],
+            ['name' => 'Ukaaye News & Updates',   'description' => 'Company news, new product arrivals, delivery updates, and offers from Ukaaye.'],
         ];
 
         $categoryModels = [];
@@ -34,12 +34,13 @@ class BlogSeeder extends Seeder
             );
         }
 
-        // 2. Tags (expanded a bit)
+        // 2. Tags
         $tagsData = [
-            '6 months+', 'weaning', 'organic', 'no added sugar', 'Sri Lankan ingredients',
-            'affordable baby food', 'parenting tips', 'baby health', 'iron rich foods',
-            'finger foods', 'breakfast ideas', 'travel with baby', 'kurakkan', 'immunity booster',
-            'natural sweetness', 'baby yogurt', 'puffs & biscuits',
+            'satellite dish', 'LNB', 'digital receiver', 'free-to-air', 'IPTV',
+            'optical fiber', 'fiber splicing', 'SC connector', 'LC connector',
+            'network switch', 'router setup', 'Wi-Fi', 'structured cabling',
+            'signal booster', 'amplifier', 'splitter', 'CCTV', 'island-wide delivery',
+            'Sri Lanka', 'technician tips',
         ];
 
         $tagModels = [];
@@ -58,122 +59,122 @@ class BlogSeeder extends Seeder
         $blogs = [
             // 1
             [
-                'title'       => 'Starting Solids the Sri Lankan Way – Safe & Simple Guide',
-                'category'    => 'Baby Nutrition Tips',
-                'tags'        => ['6 months+', 'weaning', 'Sri Lankan ingredients'],
-                'author'      => 'Aromat Nutrition Team',
-                'date'        => now()->subDays(10),
-                'excerpt'     => 'When your baby turns 6 months, here’s how to begin with trusted local ingredients...',
-                'content'     => '<p>As parents ourselves, we know the worry that comes with starting solids. In Sri Lanka we’re lucky to have natural foods like ripe papaya, banana, kurakkan, and steamed carrots.</p><p>Start single-ingredient purees for 3–4 days, watch for reactions, then mix. Our no-added-sugar cereals make this transition easy and safe.</p>',
-                'image'       => 'assets/images/blog/631322687-H.webp',
+                'title'    => 'How to Choose the Right Satellite Dish for Your Home in Sri Lanka',
+                'category' => 'Satellite Systems',
+                'tags'     => ['satellite dish', 'LNB', 'Sri Lanka'],
+                'author'   => 'Ukaaye Technical Team',
+                'date'     => now()->subDays(10),
+                'excerpt'  => 'Picking the correct dish size and LNB type makes all the difference for a clear, stable signal across Sri Lanka.',
+                'content'  => '<p>In Sri Lanka, most households use either a 45 cm or 60 cm offset dish depending on their location and the satellite they target. Colombo and coastal areas generally get away with a 45 cm dish for Measat-3 (Astro / Dialog), while hill-country or southern regions benefit from a 60 cm or larger dish for a more stable signal.</p><p>Always pair your dish with a quality universal LNB (0.1 dB noise figure) for best performance. At Ukaaye, we stock a full range of dishes, mounts, and LNBs with island-wide delivery direct to your door or workshop.</p>',
+                'image'    => 'assets/img/blog/544356456.png',
             ],
 
             // 2
             [
-                'title'       => 'Why Affordable Premium Baby Food Matters in Sri Lanka',
-                'category'    => 'Aromat Stories',
-                'tags'        => ['affordable baby food', 'Sri Lankan ingredients'],
-                'author'      => 'Thisara – Aromat Founder',
-                'date'        => now()->subDays(18),
-                'excerpt'     => 'Our journey from frustration to solution – making quality nutrition reachable for every family.',
-                'content'     => '<p>Imported baby food was often too expensive, and cheaper options had additives we didn’t trust. That’s why we manufacture right here in Piliyandala – using local grains and fruits to keep prices fair without compromising quality.</p>',
-                'image'       => 'assets/images/blog/631322687-H.webp',
+                'title'    => 'Top 5 Digital Receivers Available in Sri Lanka – 2025 Guide',
+                'category' => 'Digital Receivers',
+                'tags'     => ['digital receiver', 'free-to-air', 'IPTV'],
+                'author'   => 'Ukaaye Technical Team',
+                'date'     => now()->subDays(18),
+                'excerpt'  => 'From budget free-to-air boxes to full IPTV-capable receivers – here are the top picks we recommend in 2025.',
+                'content'  => '<p>Whether you are a technician fitting a receiver for a client or a homeowner upgrading your setup, choosing the right digital receiver matters. Look for H.265/HEVC decoding, USB PVR support, and Ethernet/Wi-Fi built-in for future-proof use.</p><ul><li><strong>Entry Level:</strong> Standard FTA HD receiver – reliable and affordable</li><li><strong>Mid Range:</strong> Full HD receiver with USB recording</li><li><strong>Advanced:</strong> IPTV + satellite combo receiver</li><li><strong>Professional:</strong> 4K UHD receiver with CI+ slot</li><li><strong>OTT/IPTV Box:</strong> Android-based streaming receiver</li></ul><p>Ukaaye stocks all categories with genuine products and manufacturer warranties. Order online for same-week island-wide delivery.</p>',
+                'image'    => 'assets/img/blog/544356456.png',
             ],
 
             // 3
             [
-                'title'       => '5 Iron-Rich First Foods Every Sri Lankan Baby Needs',
-                'category'    => 'Baby Nutrition Tips',
-                'tags'        => ['iron rich foods', '6 months+', 'kurakkan'],
-                'author'      => 'Aromat Nutrition Team',
-                'date'        => now()->subDays(5),
-                'excerpt'     => 'Prevent anaemia naturally with these everyday Sri Lankan ingredients.',
-                'content'     => '<ul><li>Kurakkan porridge – nature’s iron powerhouse</li><li>Mashed dhal with red rice</li><li>Beetroot puree</li><li>Our fortified baby cereal</li><li>Ragi laddus (small amounts for older babies)</li></ul><p>Pair with vitamin-C fruits like wood apple for better absorption.</p>',
-                'image'       => 'assets/images/blog/631322687-H.webp',
+                'title'    => 'Optical Fiber Cable Types Explained – Single Mode vs Multi Mode',
+                'category' => 'Optical Fiber & Cabling',
+                'tags'     => ['optical fiber', 'fiber splicing', 'SC connector', 'LC connector'],
+                'author'   => 'Ukaaye Technical Team',
+                'date'     => now()->subDays(5),
+                'excerpt'  => 'Understanding the difference between single mode and multi mode fiber is essential before any installation job.',
+                'content'  => '<p><strong>Single Mode (OS2):</strong> Uses a 9/125 µm core – ideal for long-distance runs of 10 km and beyond. Used in ISP backbone networks, GPON FTTH, and campus links. Yellow jacket colour.</p><p><strong>Multi Mode (OM3/OM4):</strong> Uses a 50/125 µm core – best for short distances up to 300 m inside buildings, data centres, and LAN backbones. Aqua or violet jacket colour.</p><p>At Ukaaye we supply both types in various counts (4-core, 8-core, 24-core, 48-core and more), along with SC, LC, FC, and ST connectors, splice-ready pigtails, and fusion splicing equipment – everything a fiber technician needs, delivered island-wide.</p>',
+                'image'    => 'assets/img/blog/544356456.png',
             ],
 
             // 4
             [
-                'title'       => 'No-Added-Sugar Baby Biscuits – Safe First Finger Foods',
-                'category'    => 'Product Spotlights',
-                'tags'        => ['finger foods', 'no added sugar', 'puffs & biscuits'],
-                'author'      => 'Aromat Team',
-                'date'        => now()->subDays(7),
-                'excerpt'     => 'Perfect shape, perfect texture – made for little hands and growing teeth.',
-                'content'     => '<p>Many store biscuits have hidden sugar. Ours use rice flour, ragi, banana powder, and coconut – dissolving easily while encouraging self-feeding.</p>',
-                'image'       => 'assets/images/blog/631322687-H.webp',
+                'title'    => 'Setting Up a Small Office Network in Sri Lanka – A Practical Guide',
+                'category' => 'Networking Gear',
+                'tags'     => ['network switch', 'router setup', 'structured cabling', 'Wi-Fi'],
+                'author'   => 'Ukaaye Technical Team',
+                'date'     => now()->subDays(7),
+                'excerpt'  => 'Step-by-step advice for technicians and business owners setting up a reliable office LAN with the right gear.',
+                'content'  => '<p>A solid small-office network starts with a quality gigabit switch (8–24 port), a business-class router with dual WAN failover, and proper Cat6 structured cabling. Avoid using consumer routers for more than 15 users – they are not designed for the traffic load.</p><p>Key products to consider:</p><ul><li>Gigabit PoE switch for IP cameras and Wi-Fi access points</li><li>Dual-WAN router for fiber + 4G backup</li><li>Ceiling-mount Wi-Fi 6 access points for full coverage</li><li>Cat6 UTP/FTP patch panels and keystone jacks</li></ul><p>Ukaaye supplies all of the above from trusted brands. Talk to our team for a product recommendation tailored to your office size and budget.</p>',
+                'image'    => 'assets/img/blog/544356456.png',
             ],
 
             // 5
             [
-                'title'       => 'Traveling Around Sri Lanka with a Baby – Food Packing Tips',
-                'category'    => 'Parenting in Sri Lanka',
-                'tags'        => ['travel with baby', '6 months+'],
-                'author'      => 'Aromat Parents',
-                'date'        => now()->subDays(3),
-                'excerpt'     => 'From train rides to beach trips – how we keep baby fed and happy.',
-                'content'     => '<p>Pack our ready pouches, small cereal boxes, date powder for sweetness, and a thermos. Works great for Ella trains or Tangalle beach days!</p>',
-                'image'       => 'assets/images/blog/631322687-H.webp',
+                'title'    => 'Signal Too Weak? How to Fix Poor Satellite or Antenna Reception',
+                'category' => 'Signal Solutions',
+                'tags'     => ['signal booster', 'amplifier', 'splitter', 'satellite dish'],
+                'author'   => 'Ukaaye Technical Team',
+                'date'     => now()->subDays(3),
+                'excerpt'  => 'Common causes of weak signal and how to fix them using boosters, amplifiers, and quality cables.',
+                'content'  => '<p>Weak or pixelating signal is one of the most common issues reported by customers and technicians. Before buying a booster, check these first:</p><ol><li>Cable run length – every 10 m of RG6 coax loses about 3 dB at 2 GHz</li><li>Quality of the F-connector termination – poor crimp = signal loss</li><li>Number of splitters in line – each 2-way splitter costs ~3.5 dB</li><li>LNB condition – old or water-damaged LNBs degrade performance</li></ol><p>If the signal is genuinely insufficient, a distribution amplifier or inline booster from our range can restore signal strength across multiple outlet points. Ukaaye stocks a full range of signal amplifiers, splitters, and premium RG6 coax for technicians and home installers.</p>',
+                'image'    => 'assets/img/blog/544356456.png',
             ],
 
             // 6
             [
-                'title'       => 'Kurakkan Power: Why We Love This Ancient Sri Lankan Supergrain',
-                'category'    => 'Baby Nutrition Tips',
-                'tags'        => ['kurakkan', 'iron rich foods', 'organic'],
-                'author'      => 'Aromat Nutrition Team',
-                'date'        => now()->subDays(14),
-                'excerpt'     => 'Ragi / kurakkan – calcium, iron, and fibre in one humble grain.',
-                'content'     => '<p>Our grandparents knew it well. High in natural calcium and iron, gluten-free, and perfect for porridge or mixing into our baby cereals.</p>',
-                'image'       => 'assets/images/blog/631322687-H.webp',
+                'title'    => 'CCTV Camera Cabling – Coax vs IP Network: Which Should You Choose?',
+                'category' => 'Networking Gear',
+                'tags'     => ['CCTV', 'optical fiber', 'structured cabling', 'Sri Lanka'],
+                'author'   => 'Ukaaye Technical Team',
+                'date'     => now()->subDays(14),
+                'excerpt'  => 'Choosing between analog coax CCTV and IP network cameras depends on your site, budget, and future plans.',
+                'content'  => '<p><strong>Analog / HD-CVI/TVI/AHD (Coaxial):</strong> Cost-effective for small sites, runs over existing RG59/RG6 cable, supports up to 8 MP. Good choice when replacing an existing analog system.</p><p><strong>IP Network Cameras (PoE):</strong> Scalable, higher resolution (up to 4K), remote access via app, runs on standard Cat6 cabling. Ideal for new installations and larger sites.</p><p><strong>Fiber Extension:</strong> For distances beyond 90 m or between buildings, use fiber media converters with your IP cameras – Ukaaye supplies both the converters and fiber cable.</p><p>We stock DVRs, NVRs, PoE switches, cameras, and all cabling accessories. Island-wide delivery to technicians and contractors.</p>',
+                'image'    => 'assets/img/blog/544356456.png',
             ],
 
             // 7
             [
-                'title'       => 'Simple Homemade Papaya & Banana Puree – 6 Month Starter',
-                'category'    => 'Homemade Baby Food',
-                'tags'        => ['6 months+', 'weaning', 'natural sweetness'],
-                'author'      => 'Aromat Kitchen',
-                'date'        => now()->subDays(8),
-                'excerpt'     => 'No cooking needed – just two local fruits for a nutrient-packed first meal.',
-                'content'     => '<p>Mash ripe papaya and banana together. Add breastmilk/formula for smoother texture. Rich in vitamins A & C – gentle on tiny tummies.</p>',
-                'image'       => 'assets/images/blog/631322687-H.webp',
+                'title'    => 'Free-to-Air Satellite Channels Available in Sri Lanka – 2025 List',
+                'category' => 'Satellite Systems',
+                'tags'     => ['free-to-air', 'satellite dish', 'digital receiver', 'Sri Lanka'],
+                'author'   => 'Ukaaye Editorial',
+                'date'     => now()->subDays(8),
+                'excerpt'  => 'A quick reference list of popular FTA satellite channels receivable from Sri Lanka on common satellites.',
+                'content'  => '<p>Sri Lanka sits within the footprints of several key satellites. Here are the most commonly used for free-to-air reception:</p><ul><li><strong>Measat-3/3a (91.5°E):</strong> Dialog TV, Sirasa, Shakthi, ITN and many regional channels</li><li><strong>Intelsat 20 (68.5°E):</strong> Wide range of South Asian and international FTA channels</li><li><strong>AsiaSat 7 (105.5°E):</strong> Variety of Asian FTA channels</li><li><strong>Thaicom 6 (78.5°E):</strong> C-band FTA, useful in fringe areas</li></ul><p>To receive these you need the right dish size, a compatible universal or C-band LNB, and a quality FTA receiver. Ukaaye supplies everything you need, nationwide.</p>',
+                'image'    => 'assets/img/blog/544356456.png',
             ],
 
             // 8
             [
-                'title'       => 'Building Strong Immunity with Everyday Sri Lankan Foods',
-                'category'    => 'Baby Development & Health',
-                'tags'        => ['immunity booster', 'baby health', 'Sri Lankan ingredients'],
-                'author'      => 'Aromat Nutrition Team',
-                'date'        => now()->subDays(2),
-                'excerpt'     => 'Support your baby’s defences naturally – no fancy supplements needed.',
-                'content'     => '<p>Include turmeric in mild curry mixes, honey/date powder for natural energy, and yogurt for probiotics. Our baby curry mixes are gentle and immunity-friendly.</p>',
-                'image'       => 'assets/images/blog/631322687-H.webp',
+                'title'    => 'How to Terminate an SC Fiber Connector – Step by Step for Technicians',
+                'category' => 'Optical Fiber & Cabling',
+                'tags'     => ['fiber splicing', 'SC connector', 'LC connector', 'technician tips'],
+                'author'   => 'Ukaaye Technical Team',
+                'date'     => now()->subDays(2),
+                'excerpt'  => 'A practical termination guide for SC fiber connectors using the epoxy and polish method.',
+                'content'  => '<p>SC connectors remain one of the most widely used fiber connectors in Sri Lankan installations. Here s the basic epoxy-polish method:</p><ol><li>Strip the outer jacket 60 mm, then the buffer tube 30 mm, leaving 25 mm of bare fiber</li><li>Clean the fiber thoroughly with IPA wipes</li><li>Inject a small amount of epoxy into the SC connector ferrule</li><li>Insert the fiber until it protrudes slightly from the ferrule tip</li><li>Cure in the oven at 100°C for 5 minutes (or use quick-cure epoxy)</li><li>Score and cleave the excess fiber flush with the ferrule</li><li>Polish using 12 µm, 3 µm, and 1 µm lapping film on a flat plate</li><li>Inspect with a 200× fiber microscope</li></ol><p>Ukaaye supplies SC, LC, FC, and ST connectors, polishing kits, epoxy, and fiber inspection microscopes – everything for professional field termination.</p>',
+                'image'    => 'assets/img/blog/544356456.png',
             ],
 
             // 9
             [
-                'title'       => 'Our Baby Yogurt – Natural, No Added Sugar, Made for Sri Lanka',
-                'category'    => 'Product Spotlights',
-                'tags'        => ['baby yogurt', 'no added sugar', 'natural sweetness'],
-                'author'      => 'Aromat Team',
-                'date'        => now(),
-                'excerpt'     => 'Creamy, probiotic-rich yogurt perfect as a first dessert or snack.',
-                'content'     => '<p>Made with real milk and fruit purees – no artificial flavours. Great mixed with our date powder for natural sweetness Sri Lankan babies love.</p>',
-                'image'       => 'assets/images/blog/631322687-H.webp',
+                'title'    => 'Why Ukaaye is Sri Lanka\'s Trusted Source for Signal & Connectivity Products',
+                'category' => 'Ukaaye News & Updates',
+                'tags'     => ['island-wide delivery', 'Sri Lanka', 'technician tips'],
+                'author'   => 'Ukaaye Team',
+                'date'     => now(),
+                'excerpt'  => 'From satellite systems to fiber cables and networking gear – discover why thousands of technicians and businesses trust Ukaaye.',
+                'content'  => '<p>Ukaaye is Sri Lanka\'s leading provider of satellite systems, digital receivers, optical fiber cables, networking gear, and signal solutions. We serve technicians, contractors, homes, and businesses across the entire island.</p><p><strong>Why choose Ukaaye?</strong></p><ul><li>Genuine products with manufacturer warranties</li><li>Competitive trade and retail pricing</li><li>Island-wide delivery – order today, receive this week</li><li>Expert technical support before and after your purchase</li><li>Wide in-stock range – no waiting for imports</li></ul><p>Whether you are installing a satellite dish in Jaffna, running fiber in Kandy, or upgrading a business network in Colombo – Ukaaye has the products and the expertise to support your project. Contact us or browse our full product range online.</p>',
+                'image'    => 'assets/img/blog/544356456.png',
             ],
 
             // 10
             [
-                'title'       => 'Puffs & Snacks: Making Self-Feeding Fun and Nutritious',
-                'category'    => 'Product Spotlights',
-                'tags'        => ['puffs & biscuits', 'finger foods', '6 months+'],
-                'author'      => 'Aromat Parents',
-                'date'        => now()->subDays(4),
-                'excerpt'     => 'Messy but magical – the stage every parent looks forward to.',
-                'content'     => '<p>Our puffs dissolve quickly, reducing choking risk, and are made with whole grains. Ideal for on-the-go or playtime learning.</p>',
-                'image'       => 'assets/images/blog/631322687-H.webp',
+                'title'    => 'Wi-Fi Dead Zones? How to Extend Coverage in Large Homes and Offices',
+                'category' => 'Networking Gear',
+                'tags'     => ['Wi-Fi', 'router setup', 'network switch', 'signal booster'],
+                'author'   => 'Ukaaye Technical Team',
+                'date'     => now()->subDays(4),
+                'excerpt'  => 'Practical solutions to eliminate Wi-Fi dead zones using access points, mesh systems, or powerline adapters.',
+                'content'  => '<p>A single router rarely covers a large two-story home or a medium-sized office reliably. Here are the best options to extend coverage:</p><p><strong>Option 1 – Wired Access Points:</strong> The best solution. Run Cat6 from your main switch to ceiling-mount Wi-Fi 6 access points in each zone. Consistent speed, no interference. Ukaaye stocks PoE-capable access points ideal for this setup.</p><p><strong>Option 2 – Mesh Wi-Fi System:</strong> Wireless backhaul between nodes – easy to install but slightly less efficient than wired. Good for homes where cabling is difficult.</p><p><strong>Option 3 – Powerline Adapters:</strong> Use existing electrical wiring to carry network – useful as a stopgap but performance varies by wiring quality.</p><p>For permanent installations we always recommend Option 1 with proper Cat6 structured cabling. Talk to us for product recommendations and quantities.</p>',
+                'image'    => 'assets/img/blog/544356456.png',
             ],
         ];
 
@@ -181,17 +182,17 @@ class BlogSeeder extends Seeder
             $category = $categoryModels[$data['category']];
 
             $blog = Blog::create([
-                'title'             => $data['title'],
-                'slug'              => Str::slug($data['title']),
-                'meta_title'        => $data['title'] . ' | Aromat Baby Food Sri Lanka',
-                'meta_description'  => $data['excerpt'] . ' Trusted nutrition from a Sri Lankan family brand.',
-                'meta_keywords'     => implode(', ', $data['tags']) . ', baby food Sri Lanka, Aromat',
-                'blog_category_id'  => $category->id,
-                'author_name'       => $data['author'],
-                'published_at'      => $data['date'],
-                'description'       => $data['content'],
-                'image_path'        => $data['image'],
-                'is_active'         => true,
+                'title'            => $data['title'],
+                'slug'             => Str::slug($data['title']),
+                'meta_title'       => $data['title'] . ' | Ukaaye Sri Lanka',
+                'meta_description' => $data['excerpt'] . ' Trusted signal & connectivity products island-wide.',
+                'meta_keywords'    => implode(', ', $data['tags']) . ', satellite Sri Lanka, fiber cable, Ukaaye',
+                'blog_category_id' => $category->id,
+                'author_name'      => $data['author'],
+                'published_at'     => $data['date'],
+                'description'      => $data['content'],
+                'image_path'       => $data['image'],
+                'is_active'        => true,
             ]);
 
             // Attach tags
@@ -199,6 +200,6 @@ class BlogSeeder extends Seeder
             $blog->tags()->attach($tagIds);
         }
 
-        $this->command->info('Aromat blog – 10 demo posts seeded successfully!');
+        $this->command->info('Ukaaye blog – 10 demo posts seeded successfully!');
     }
 }
