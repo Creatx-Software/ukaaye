@@ -11,6 +11,7 @@ use App\Models\Order;
 use App\Models\Product;
 use App\Models\ProductCategory;
 use App\Models\ProductTag;
+use App\Models\Service;
 
 class RouteController extends Controller
 {
@@ -20,6 +21,20 @@ class RouteController extends Controller
         if ($slug === 'order-success') {
             $order = Order::where('order_code', $request->query('code'))->firstOrFail();
             return view('frontend.checkout.success', compact('order'));
+        }
+
+        // Check if it's a service
+        $service = Service::where('slug', $slug)
+                          ->where('is_public', true)
+                          ->first();
+
+        if ($service) {
+            $otherServices = Service::where('is_public', true)
+                ->where('id', '!=', $service->id)
+                ->take(4)
+                ->get();
+
+            return view('frontend.servicedetails.index', compact('service', 'otherServices'));
         }
 
         // Check if it's a product

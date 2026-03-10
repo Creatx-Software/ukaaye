@@ -13,7 +13,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\RouteController;
-
+use App\Http\Controllers\ServiceController;
 
 
 // Home Page
@@ -62,6 +62,8 @@ Route::delete('/wishlist/remove/{id}', [WishlistController::class, 'remove'])->n
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
 Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout.store');
 
+// Services Page
+Route::get('/services', [ServiceController::class, 'index'])->name('services');
 
 // Catch-all dynamic routes 
 Route::get('/{slug}', [RouteController::class, 'resolve']);

@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
         );
 
         $this->call(BlogSeeder::class);
+        $this->call(ServiceSeeder::class);
         $this->call(TestimonialSeeder::class);
         $this->call(FaqSeeder::class);
         $this->call(ProductSeeder::class);

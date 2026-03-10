@@ -15,44 +15,7 @@
             
 
 
-<section>
-  <div class="container">
-    <div class="heading">
-      <img src="assets/img/heading-img.png" alt="img">
-      <span>Sustainable Energy Services</span>
-      <h2>Produce Your Own Clean Save The Environment</h2>
-    </div>
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="services">
-          <i class="flaticon-battery"></i>
-          <h3><a href="service-details.html"> Battery Storage</a></h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-          <a href="service-details.html"><i class="flaticon-right-up"></i></a>
-          <img src="https://placehold.co/390x199" alt="img">
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="services">
-          <i class="flaticon-water-energy"></i>
-          <h3><a href="service-details.html">Hydropower Plants</a></h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-          <a href="service-details.html"><i class="flaticon-right-up"></i></a>
-          <img src="https://placehold.co/390x199" alt="img">
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="services">
-          <i class="flaticon-fossil-fuel"></i>
-          <h3><a href="service-details.html">Fossil Resources</a></h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-          <a href="service-details.html"><i class="flaticon-right-up"></i></a>
-          <img src="https://placehold.co/390x199" alt="img">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 <section class="gap sustainable-section">
   <div class="container">
     <div class="need-expert" style="background-image: url(assets/img/need-expert.jpg);">

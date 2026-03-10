@@ -51,6 +51,9 @@
                     <li class="navbar-dropdown">
                         <a href="{{ route('about') }}">About</a>
                     </li>
+                    <li class="navbar-dropdown">
+                        <a href="{{ route('services') }}">Services</a>
+                    </li>
                     <li class="navbar-dropdown menu-item-children">
                         <a href="#">Pages</a>
                         <ul class="sub-menu">

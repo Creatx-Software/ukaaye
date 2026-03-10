@@ -1,0 +1,17 @@
+<section style="background-image: url(assets/img/home/img-post-antennas.jpg);" class="bannr">
+  <div class="container">
+    <div class="bannr-text">
+      <h2>{{ $service->title }}</h2>
+      <p>Expert network, satellite, and electronic solutions for homes and businesses</p>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="{{ route('home') }}"><i class="fa-solid fa-house"></i> Home</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="{{ route('services') }}">Our Services</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">{{ $service->title }}</li>
+      </ol>
+    </div>
+  </div>
+</section>
