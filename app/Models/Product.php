@@ -14,7 +14,7 @@ class Product extends Model
     protected $fillable = [
         'title', 'slug', 'meta_title', 'meta_description', 'meta_keyword',
         'product_category_id', 'description', 'main_img', 'other_img',
-        'product_code', 'retail_price', 'discounted_price', 'qty',
+        'product_code', 'brand', 'retail_price', 'discounted_price', 'qty',
         'product_status', 'is_active',
     ];
 
@@ -27,7 +27,7 @@ class Product extends Model
     public function getMainImgUrlAttribute(): string
     {
         if (!$this->main_img) {
-            return asset('assets/images/product/81zLS5Rv18L.jpg');
+            return asset('assets/images/product/566746376.jpg');
         }
 
         if (str_starts_with($this->main_img, 'assets/')) {

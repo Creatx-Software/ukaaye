@@ -24,6 +24,7 @@ class ProductsTable
                 TextColumn::make('title')->searchable()->sortable(),
                 TextColumn::make('category.name')->label('Category')->sortable(),
                 TextColumn::make('product_code')->label('Code')->placeholder('—'),
+                TextColumn::make('brand')->placeholder('—')->searchable(),
                 TextColumn::make('retail_price')->money('LKR')->sortable(),
                 TextColumn::make('discounted_price')->money('LKR')->placeholder('—'),
                 TextColumn::make('qty')->label('Qty')->sortable(),

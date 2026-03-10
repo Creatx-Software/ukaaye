@@ -71,9 +71,12 @@ class ProductForm
                                     ->searchable()
                                     ->preload(),
                             ]),
-                        Grid::make(3)
+                        Grid::make(4)
                             ->components([
                                 Forms\Components\TextInput::make('product_code')
+                                    ->maxLength(255)
+                                    ->nullable(),
+                                Forms\Components\TextInput::make('brand')
                                     ->maxLength(255)
                                     ->nullable(),
                                 Forms\Components\Select::make('product_status')

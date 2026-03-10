@@ -21,9 +21,10 @@ class ProductInfolist
                         TextEntry::make('slug'),
                         TextEntry::make('category.name')->label('Category'),
                         TextEntry::make('tags.name')->label('Tags')->badge(),
-                        Grid::make(3)
+                        Grid::make(4)
                             ->components([
                                 TextEntry::make('product_code')->placeholder('—'),
+                                TextEntry::make('brand')->placeholder('—'),
                                 TextEntry::make('product_status')
                                     ->label('Stock Status')
                                     ->formatStateUsing(fn (string $state) => match ($state) {
