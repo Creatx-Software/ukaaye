@@ -49,7 +49,7 @@
                         <a href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="navbar-dropdown">
-                        <a href="{{ route('about') }}">About</a>
+                        <a href="#">About</a>
                     </li>
                     <li class="navbar-dropdown">
                         <a href="{{ route('services') }}">Services</a>
