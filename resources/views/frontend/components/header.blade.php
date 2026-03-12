@@ -69,7 +69,7 @@
                     <li class="navbar-dropdown menu-item-children">
                         <a href="#">More</a>
                         <ul class="sub-menu">
-                            <li><a href="our-blog.html">our blog</a></li>
+                            <li><a href="{{ route('testimonials') }}">Testimonials</a></li>
                             <li><a href="blog-details.html">blog details</a></li>
                         </ul>
                     </li>
