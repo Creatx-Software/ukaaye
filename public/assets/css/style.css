@@ -2895,7 +2895,7 @@ ul.social-media {
   display: none;
 }
 .accordion-item .content p {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
     color: #666;
     padding-left: 50px;
@@ -3245,7 +3245,7 @@ ul.image-gallery {
 .accordion.two .accordion-item i {
     position: absolute;
     left: 8px;
-    font-size: 44px;
+    font-size: 28px;
     top: 14px;
 }
 .accordion.two .accordion-item {
@@ -3266,7 +3266,7 @@ ul.image-gallery {
     color: var(--common-colour);
 }
 .accordion.two .accordion-item .title {
-    font-size: 24px;
+    font-size: 18px;
 }
 /* 47. greener-tomorrowfor-everyone */
 .greener-tomorrowfor-everyone-text {

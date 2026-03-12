@@ -1,4 +1,3 @@
-{{-- Add this ONLY if Font Awesome is not already loaded in your layout --}}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <section class="gap">
@@ -6,7 +5,7 @@
     <div class="heading">
       <img src="assets/img/heading-img.png" alt="img">
       <span>Welcome to Ukaaye </span>
-      <h2>Welcome to Ukaaye – Sri Lanka's Trusted Supplier for CATV, CCTV & Fiber Optic Solutions</h2>
+      <h2 style="font-size: 38px; line-height: 1.4;">Welcome to Ukaaye – Sri Lanka's Trusted Supplier for CATV, CCTV & Fiber Optic Solutions</h2>
     </div>
     <div class="row">
       <div class="col-lg-5">
