@@ -14,21 +14,25 @@ class ProductForm
     public static function configure(Schema $schema): Schema
     {
         return $schema
+            ->columns(1)
             ->components([
                 Section::make('Product Details')
                     ->icon('heroicon-o-shopping-bag')
                     ->components([
-                        Forms\Components\TextInput::make('title')
-                            ->required()
-                            ->maxLength(255)
-                            ->afterStateUpdated(function (Set $set, ?string $state) {
-                                $set('slug', Str::slug($state));
-                            })
-                            ->live(onBlur: true),
-                        Forms\Components\TextInput::make('slug')
-                            ->required()
-                            ->unique(ignoreRecord: true)
-                            ->maxLength(255),
+                        Grid::make(2)
+                            ->components([
+                                Forms\Components\TextInput::make('title')
+                                    ->required()
+                                    ->maxLength(255)
+                                    ->afterStateUpdated(function (Set $set, ?string $state) {
+                                        $set('slug', Str::slug($state));
+                                    })
+                                    ->live(onBlur: true),
+                                Forms\Components\TextInput::make('slug')
+                                    ->required()
+                                    ->unique(ignoreRecord: true)
+                                    ->maxLength(255),
+                            ]),
                         Grid::make(2)
                             ->components([
                                 Forms\Components\Select::make('product_category_id')
@@ -82,9 +86,9 @@ class ProductForm
                                 Forms\Components\Select::make('product_status')
                                     ->label('Stock Status')
                                     ->options([
-                                        'in_stock' => 'In Stock',
+                                        'in_stock'     => 'In Stock',
                                         'out_of_stock' => 'Out of Stock',
-                                        'pre_order' => 'Pre Order',
+                                        'pre_order'    => 'Pre Order',
                                     ])
                                     ->default('in_stock')
                                     ->required(),
@@ -144,15 +148,18 @@ class ProductForm
 
                 Section::make('SEO')
                     ->icon('heroicon-o-magnifying-glass')
-                    ->collapsed()
                     ->components([
-                        Forms\Components\TextInput::make('meta_title')
-                            ->maxLength(255)
-                            ->nullable(),
+                        Grid::make(2)
+                            ->components([
+                                Forms\Components\TextInput::make('meta_title')
+                                    ->maxLength(255)
+                                    ->nullable(),
+                                Forms\Components\TextInput::make('meta_keyword')
+                                    ->nullable()
+                                    ->helperText('Separate keywords with commas'),
+                            ]),
                         Forms\Components\Textarea::make('meta_description')
                             ->rows(3)
-                            ->nullable(),
-                        Forms\Components\TextInput::make('meta_keyword')
                             ->nullable(),
                     ]),
             ]);

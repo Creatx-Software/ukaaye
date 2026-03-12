@@ -1,56 +1,86 @@
-<section class="tf-section tf-testimonial">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="title-heading st-3 text-center">
-                    <div class="sub-heading clr-pri-3 f-mulish d-flex align-items-center justify-content-center gap-3">
-                        <!-- Left wave (vector) -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="77" height="30" viewBox="0 0 77 30">
-                            <path d="M5 15 Q19 5 38 15 T72 15" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-                            <path d="M10 20 Q24 10 38 20 T67 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
-                        </svg>
+<section class="gap" style="background-color: #ffffff;">
+  <div class="container">
 
-                        <span class="inner-sub st-1">Parents Feedback</span>
-
-                        <!-- Right wave (vector) -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="77" height="30" viewBox="0 0 77 30">
-                            <path d="M5 15 Q19 25 38 15 T72 15" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-                            <path d="M10 10 Q24 20 38 10 T67 10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
-                        </svg>
-                    </div>
-                    <h2 class="title clr-pri-2 mt-3">
-                        What Sri Lankan Parents Say About <span class="clr-pri-3">Aromat</span> Baby Food
-                    </h2>
-                </div>
-            </div>
-
-            @foreach ($testimonials as $t)
-                <div class="col-xl-4 col-lg-6 col-md-6 col-12">
-                    <div class="item-fb wow fadeIn animated" data-wow-delay="0.3ms" data-wow-duration="1300ms">
-                        <div class="heading fx">
-                            <div class="box-avt" style="width: 80px; border-radius: 50%; overflow: hidden; border: 3px solid #f8c146; flex-shrink: 0;">
-                                <img src="{{ $t->image_url }}"
-                                     alt="{{ $t->name }}"
-                                     style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                            </div>
-                            <ul style="margin-left: 15px;">
-                                <li><h4 class="name-author clr-pri-2">{{ $t->name }}</h4></li>
-                                <li><p class="clr-pri-5 f-mulish">{{ $t->position }}</p></li>
-                                <li>
-                                    <span style="color: #f8c146; font-size: 14px;">
-                                        @for ($i = 1; $i <= 5; $i++)
-                                            {{ $i <= $t->star_count ? '★' : '☆' }}
-                                        @endfor
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="wrap">
-                            <p class="clr-pri-2">{{ $t->message }}</p>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-        </div>
+    {{-- Heading --}}
+    <div class="heading" style="text-align:center; margin-bottom:50px;">
+      <img src="{{ asset('assets/img/heading-img.png') }}" alt="img">
+      <span>Client Feedback</span>
+      <h2>What Our Clients Say</h2>
     </div>
+
+    <div class="row">
+      @forelse($testimonials as $testimonial)
+      <div class="col-lg-4 col-md-6" style="margin-bottom:30px;">
+        <div style="
+          background:#f9f9f9;
+          padding:32px 28px;
+          height:100%;
+          display:flex;
+          flex-direction:column;
+          justify-content:space-between;
+          position:relative;
+          border-bottom:3px solid #FFC80B;
+          box-shadow: 0 2px 15px rgba(0,0,0,0.07);
+        ">
+
+          {{-- Quote Icon --}}
+          <div style="
+            position:absolute;
+            top:20px;
+            right:28px;
+            font-size:70px;
+            line-height:1;
+            color:#FFC80B;
+            opacity:0.3;
+            font-family:Georgia, serif;
+          ">"</div>
+
+          {{-- Star Rating --}}
+          <div style="display:flex; gap:4px; margin-bottom:16px;">
+            @for($i = 1; $i <= 5; $i++)
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="{{ $i <= $testimonial->star_count ? '#FFC80B' : '#ddd' }}" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            @endfor
+          </div>
+
+          {{-- Message --}}
+          <p style="
+            color:#444;
+            font-size:15px;
+            line-height:1.8;
+            flex:1;
+            margin-bottom:24px;
+          ">{{ $testimonial->message }}</p>
+
+          {{-- Divider --}}
+          <div style="width:40px; height:2px; background:#FFC80B; margin-bottom:20px;"></div>
+
+          {{-- Author --}}
+          <div style="display:flex; align-items:center; gap:14px;">
+            <div style="width:56px; height:56px; border-radius:50%; overflow:hidden; flex-shrink:0; border:2px solid #FFC80B;">
+              <img src="{{ $testimonial->image_url }}" alt="{{ $testimonial->name }}" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <div>
+              <h5 style="margin:0 0 4px 0; color:#124179; font-size:16px; font-weight:700;">
+                {{ $testimonial->name }}
+              </h5>
+              @if($testimonial->position)
+              <span style="color:#124179; font-size:13px; font-weight:600; opacity:0.7;">
+                {{ $testimonial->position }}
+              </span>
+              @endif
+            </div>
+          </div>
+
+        </div>
+      </div>
+      @empty
+      <div class="col-12">
+        <p style="text-align:center; color:#aaa; padding:60px 0;">No testimonials found.</p>
+      </div>
+      @endforelse
+    </div>
+
+  </div>
 </section>

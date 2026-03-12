@@ -18,7 +18,7 @@
                   </svg>
               </i>
               <span>Send Email: </span>
-              <a class="me-3" href="mailto:info@example.com">info@example.com</a>
+              <a class="me-3" href="mailto:info@ukaaye.com">info@ukaaye.com</a>
             </div>
           </div>
         </div>
@@ -35,7 +35,7 @@
         <div class="bottom-bar-text">
             <div class="logo" style="display:flex;align-items:center;gap:12px;">
                 <a href="{{ route('home') }}" style="display:flex;align-items:center;text-decoration:none;">
-                    <img src="assets/img/logo/logo_bg_remove.png" 
+                    <img src="assets/img/logo/main_img_3.webp" 
                         alt="Ukaaye" 
                         style="max-height:70px;width:auto;height:auto;vertical-align:middle;">
                     <span style="display:none; font-family:'Poppins',sans-serif;font-size:28px;font-weight:700;color:#ffffff;letter-spacing:1px;line-height:1;">
@@ -45,54 +45,37 @@
             </div>
             <nav class="navbar">
                 <ul class="navbar-links">
-                    <li class="navbar-dropdown">
+                    <li class="navbar-dropdown {{ request()->routeIs('home') ? 'active' : '' }}">
                         <a href="{{ route('home') }}">Home</a>
                     </li>
-                    <li class="navbar-dropdown">
-                        <a href="#">About</a>
+                    <li class="navbar-dropdown {{ request()->routeIs('about') ? 'active' : '' }}">
+                        <a href="{{ route('about') }}">About</a>
                     </li>
-                    <li class="navbar-dropdown">
+                    <li class="navbar-dropdown {{ request()->routeIs('services') ? 'active' : '' }}">
                         <a href="{{ route('services') }}">Services</a>
                     </li>
-                    <li class="navbar-dropdown menu-item-children">
+                    <li class="navbar-dropdown menu-item-children {{ request()->routeIs('products', 'cart') ? 'active' : '' }}">
                         <a href="{{ route('products') }}">Products</a>
                         <ul class="sub-menu">
                             <li><a href="{{ route('products') }}">Products</a></li>
                             <li><a href="{{ route('cart') }}">Cart</a></li>
                         </ul>
                     </li>
-                    <li class="navbar-dropdown menu-item-children">
-                        <a href="#">Pages</a>
+
+                    <li class="navbar-dropdown {{ request()->routeIs('blog') ? 'active' : '' }}">
+                        <a href="{{ route('blog') }}">Blog</a>
+                    </li>
+
+                    <li class="navbar-dropdown menu-item-children {{ request()->routeIs('testimonials', 'faq', 'gallery') ? 'active' : '' }}">
+                        <a href="#">More</a>
                         <ul class="sub-menu">
-                            <li class="sub-menu-item-children"><a href="#">project</a>
-                                <ul class="sub-menu">
-                                  <li><a href="our-project.html">our project</a></li>
-                                  <li><a href="our-project-2.html">our project 2</a></li>
-                                  <li><a href="project-details.html">project details</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="our-history.html">our history</a></li>
-                            <li><a href="pricing-plans.html">pricing plans</a></li>
-                            <li><a href="faq.html">faq</a></li>
-                            <li><a href="404.html">404</a></li>
+                            <li><a href="{{ route('testimonials') }}">Testimonials</a></li>
+                            <li><a href="{{ route('faq') }}">FAQs</a></li>
+                            <li><a href="{{ route('gallery') }}">Gallery</a></li>
                         </ul>
                     </li>
-                    <li class="navbar-dropdown menu-item-children">
-                        <a href="#">Services</a>
-                        <ul class="sub-menu">
-                            <li><a href="our-services.html">our services</a></li>
-                            <li><a href="service-details.html">service details</a></li>
-                        </ul>
-                    </li>
-                    <li class="navbar-dropdown menu-item-children">
-                        <a href="#">News</a>
-                        <ul class="sub-menu">
-                            <li><a href="our-blog.html">our blog</a></li>
-                            <li><a href="blog-details.html">blog details</a></li>
-                        </ul>
-                    </li>
-                    <li class="navbar-dropdown">
-                        <a href="contact.html">Contact</a>
+                    <li class="navbar-dropdown {{ request()->routeIs('contactus') ? 'active' : '' }}">
+                        <a href="{{ route('contactus') }}">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -106,7 +89,7 @@
                     @php $cartCount = count(session('cart', [])); @endphp
                     <span id="cart-count-badge" style="position:absolute; top:-5px; right:-5px; min-width:18px; height:18px; background:#fff; color:var(--primary-color); border:2px solid var(--primary-color); border-radius:20px; font-family:'Mulish',sans-serif; font-size:10px; font-weight:800; display:{{ $cartCount > 0 ? 'flex' : 'none' }}; align-items:center; justify-content:center; padding:0 4px; line-height:1;">{{ $cartCount }}</span>
                 </a>
-                <a href="#" class="btn">Request a Quote</a>
+                <a href="{{ route('contactus') }}" class="btn">Request a Quote</a>
             </div>
       </div>
     </div>
@@ -114,52 +97,44 @@
     <div class="mobile-nav hmburger-menu" id="mobile-nav" style="display:block;">
         <div class="res-log">
             <a href="{{ route('home') }}" class="logo">
-                <img src="assets/img/logo.png" alt="Responsive Logo" class="white-logo">
+                <img src="assets/img/logo/main_img_3.webp" alt="Ukaaye Logo" class="white-logo" style="max-height:70px;width:auto;height:auto;vertical-align:middle;">
             </a>
         </div>
         <ul>
             <li><a href="{{ route('home') }}">Home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li class="menu-item-has-children"><a href="JavaScript:void(0)">pages</a>
+            <li><a href="{{ route('about') }}">About</a></li>
+            <li><a href="{{ route('services') }}">Services</a></li>
+            <li class="menu-item-has-children"><a href="{{ route('products') }}">Products</a>
                 <ul class="sub-menu">
-                    <li><a href="our-project.html">our project</a></li>
-                    <li><a href="our-project-2.html">our project 2</a></li>
-                    <li><a href="project-details.html">project details</a></li>
-                    <li><a href="our-history.html">our history</a></li>
-                    <li><a href="pricing-plans.html">pricing plans</a></li>
-                    <li><a href="faq.html">faq</a></li>
-                    <li><a href="404.html">404</a></li>
+                    <li><a href="{{ route('products') }}">Products</a></li>
+                    <li><a href="{{ route('cart') }}">Cart</a></li>
                 </ul>
             </li>
-            <li class="menu-item-has-children"><a href="JavaScript:void(0)">service</a>
+            <li><a href="{{ route('blog') }}">Blog</a></li>
+            <li class="menu-item-has-children"><a href="JavaScript:void(0)">More</a>
                 <ul class="sub-menu">
-                    <li><a href="our-services.html">our services</a></li>
-                    <li><a href="service-details.html">service details</a></li>
+                    <li><a href="{{ route('testimonials') }}">Testimonials</a></li>
+                    <li><a href="{{ route('faq') }}">FAQs</a></li>
+                    <li><a href="{{ route('gallery') }}">Gallery</a></li>
                 </ul>
             </li>
-            <li class="menu-item-has-children"><a href="JavaScript:void(0)">News</a>
-                <ul class="sub-menu">
-                    <li><a href="our-blog.html">our blog</a></li>
-                    <li><a href="blog-details.html">blog details</a></li>
-                </ul>
-            </li>
-            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="{{ route('contactus') }}">Contact</a></li>
         </ul>
         <a href="JavaScript:void(0)" id="res-cross"></a>
     </div>
     <div class="mobile-nav desktop-menu">
-          <h2>Installation and Maintenance of Solar Panels</h2>
-          <p class="des">Practical renewable energy technology thatreduces costs and helps the environment</p>
+          <h2>Your Trusted Import &amp; Export Partner</h2>
+          <p class="des">Connecting global markets with reliable trade solutions and exceptional service.</p>
           <figure>
-            <img src="https://placehold.co/320x163" alt="img">
+            <img src="assets/img/logo/main_img_3.webp" alt="Ukaaye" style="width:100%;height:auto;border-radius:8px;">
           </figure>
           <h3>Get in touch</h3>
-          <p class="num"><a href="callto:+18880002222">+18880002222</a></p>
-          <p class="adrs">374 William S Canning Blvd, Fall River MA 2721, USA</p>
+          <p class="num"><a href="callto:+94777384992">+94777384992</a></p>
+          <p class="adrs"><a href="mailto:info@ukaaye.com">info@ukaaye.com</a></p>
           <div class="social-medias">
-              <a href="javascript:void(0)">Facebook</a>
-              <a href="javascript:void(0)">Twitter</a>
-              <a href="javascript:void(0)">Linkedin</a>
+              <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
+              <a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
             </div>
         </div>
 </header>

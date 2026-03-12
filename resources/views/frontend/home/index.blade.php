@@ -2,8 +2,9 @@
 @use('Illuminate\Support\Facades\Storage')
 @extends('layouts.frontend')
 
-
-
+@section('title', 'Ukaaye Satellite Systems | CATV, Satellite, CCTV & Fiber Optic Products Sri Lanka')
+@section('meta_description')Ukaaye Satellite Systems – Sri Lanka's leading wholesale distributor of CATV, satellite, CCTV, and fiber-optic & data networking products. Trusted supplier for dealers island-wide.@endsection
+@section('meta_keywords', 'CATV products Sri Lanka, satellite products Sri Lanka, CCTV wholesale Sri Lanka, fiber optic products Sri Lanka, data networking products Sri Lanka, Ukaaye Satellite Systems')
 
 @section('content')
     @include('frontend.home.hero')
@@ -12,17 +13,6 @@
     @include('frontend.home.cta')
     @include('frontend.home.product')
     @include('frontend.home.testimonials')
-    @include('frontend.home.temp')
-
-
-    {{--
-    @include('frontend.home.weare')
-    
-    @include('frontend.home.weoffer')
-    @include('frontend.home.chooseus')
-    @include('frontend.home.gallery')
     @include('frontend.home.blog')
-    @include('frontend.home.temp')
-    --}}
-
+    @include('frontend.home.company')
  @endsection
