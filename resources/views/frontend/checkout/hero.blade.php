@@ -2,7 +2,7 @@
   <div class="container">
     <div class="bannr-text">
       <h2>CheckOut</h2>
-      <p>Expert network, satellite, and electronic solutions for homes and businesses</p>
+      <p>Complete your purchase by providing your billing details and confirming your order.</p>
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
           <a href="{{ route('home') }}"><i class="fa-solid fa-house"></i> Home</a>
