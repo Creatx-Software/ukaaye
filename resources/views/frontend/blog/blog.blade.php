@@ -3,18 +3,18 @@
 
 {{-- Active Filter Banner --}}
 @if(request()->hasAny(['category', 'tag', 'search']))
-<div style="margin-bottom:24px; padding:12px 20px; background:#ffffff; border-left:4px solid var(--primary-color); display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 8px rgba(0,0,0,0.03); border-radius:0 4px 4px 0; border-top:1px solid #f0f0f0; border-right:1px solid #f0f0f0; border-bottom:1px solid #f0f0f0;">
-  <span style="color:#555555; font-size:14px; font-weight:400;">
+<div class="blog-filter-banner">
+  <span class="blog-filter-banner__text">
     @if(request('search'))
-      Showing results for: <strong style="color:var(--primary-color); font-weight:600; background:#f0f7ff; padding:2px 8px; border-radius:4px; margin-left:4px;">{{ request('search') }}</strong>
+      Showing results for: <strong>{{ request('search') }}</strong>
     @elseif(request('category'))
-      Filtered by category: <strong style="color:var(--primary-color); font-weight:600; background:#f0f7ff; padding:2px 8px; border-radius:4px; margin-left:4px;">{{ request('category') }}</strong>
+      Filtered by category: <strong>{{ request('category') }}</strong>
     @elseif(request('tag'))
-      Filtered by tag: <strong style="color:var(--primary-color); font-weight:600; background:#f0f7ff; padding:2px 8px; border-radius:4px; margin-left:4px;">{{ request('tag') }}</strong>
+      Filtered by tag: <strong>{{ request('tag') }}</strong>
     @endif
   </span>
-  <a href="{{ route('blog') }}" style="color:var(--primary-color); font-size:13px; text-decoration:none; display:inline-flex; align-items:center; gap:4px; border:1px solid rgba(var(--primary-color), 0.2); padding:4px 10px; border-radius:20px; background:#ffffff; transition:all 0.2s ease;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='#ffffff';" onmouseout="this.style.background='#ffffff'; this.style.color='var(--primary-color)';">
-    <span style="font-size:16px;">✕</span> Clear filter
+  <a href="{{ route('blog') }}" class="blog-filter-banner__clear">
+    <i class="fa-solid fa-xmark"></i> Clear filter
   </a>
 </div>
 @endif
@@ -34,10 +34,10 @@
                 <img src="{{ asset('assets/img/bolt-img.png') }}" alt="img" class="bolt-img">
                 <a href="{{ url($blog->slug) }}"><i class="flaticon-right-up"></i></a>
               </div>
-              <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between; padding-top:15px;">
-                <a href="{{ url($blog->slug) }}">{{ $blog->title }}</a>
-                <h5>{{ $blog->published_at->format('M d, Y') }}</h5>
-                <span>{{ $blog->category->name ?? 'General' }}</span>
+              <div style="flex:1; display:flex; flex-direction:column; gap:6px; padding-top:12px;">
+                <a href="{{ url($blog->slug) }}" style="font-size:16px; font-weight:700; line-height:22px;">{{ $blog->title }}</a>
+                <h5 style="font-size:13px; font-weight:600; margin:0;">{{ $blog->published_at->format('M d, Y') }}</h5>
+                <span style="font-size:12px; font-weight:600; margin:0;">{{ $blog->category->name ?? 'General' }}</span>
               </div>
             </div>
           </div>
@@ -50,7 +50,7 @@
 
         {{-- Pagination --}}
         @if($blogs->hasPages())
-        <nav aria-label="Page navigation">
+        <nav aria-label="Page navigation" class="blog-pagination-nav">
           <ul class="pagination">
             <li class="page-item {{ $blogs->onFirstPage() ? 'disabled' : '' }}">
               <a class="page-link previous" href="{{ $blogs->previousPageUrl() }}" aria-label="Previous">
@@ -77,20 +77,15 @@
       </div>
 
       {{-- Sidebar --}}
-      <div class="col-lg-3">
+      <div class="col-lg-3 blog-sidebar-col">
 
         {{-- Search --}}
         <div class="sidebar">
           <h3>Search</h3>
           <form action="{{ route('blog') }}" method="GET">
-            <div style="display:flex; gap:0;">
-              <input type="text" name="search" value="{{ request('search') }}"
-                placeholder="Search blogs..."
-                style="flex:1; padding:10px 14px; border:1px solid #EAEFEF;  flex:1; padding:12px 18px;  background:#ffffff; color:#333333;">
-              <button type="submit"
-                style="padding:10px 16px; background:#f5c518; border:none; cursor:pointer;">
-                <i class="fa-solid fa-magnifying-glass" style="color:#111;"></i>
-              </button>
+            <div class="blog-sidebar-search">
+              <input type="text" name="search" value="{{ request('search') }}" placeholder="Search blogs...">
+              <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
           </form>
         </div>
@@ -103,9 +98,10 @@
             @foreach($categories as $category)
             <li>
               <a href="{{ route('blog', ['category' => $category->slug]) }}"
-                 style="{{ request('category') == $category->slug ? 'color:#f5c518; font-weight:700;' : '' }}">
-                {{ Str::limit($category->name, 15) }}
-                <span style="float:right;">({{ $category->blogs_count }})</span>
+                 style="font-size:14px; font-weight:400;"
+                 @class(['blog-sidebar-meta-active' => request('category') == $category->slug])>
+                {{ Str::limit($category->name, 20) }}
+                <span class="blog-sidebar-count">({{ $category->blogs_count }})</span>
               </a>
             </li>
             @endforeach
@@ -117,13 +113,10 @@
         @if($allTags->count())
         <div class="sidebar">
           <h3>Tags</h3>
-          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <div class="blog-sidebar-tags">
             @foreach($allTags as $tag)
             <a href="{{ route('blog', ['tag' => $tag->slug]) }}"
-               style="background:{{ request('tag') == $tag->slug ? '#f5c518' : '#1a1a1a' }};
-                      border:1px solid #333;
-                      color:{{ request('tag') == $tag->slug ? '#111' : '#ccc' }};
-                      padding:5px 14px; font-size:13px; text-decoration:none;">
+               @class(['blog-sidebar-tag', 'blog-sidebar-tag--active' => request('tag') == $tag->slug])>
               {{ $tag->name }}
             </a>
             @endforeach
@@ -132,6 +125,134 @@
         @endif
 
       </div>
+
+      <style>
+        /* Filter banner */
+        .blog-filter-banner {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 10px;
+          margin-bottom: 24px;
+          padding: 12px 20px;
+          background: #fff;
+          border-left: 4px solid var(--common-colour);
+          border: 1px solid #f0f0f0;
+          border-left: 4px solid var(--common-colour);
+          box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+          border-radius: 0 4px 4px 0;
+        }
+        .blog-filter-banner__text {
+          font-size: 14px;
+          color: #555;
+          flex: 1;
+          min-width: 0;
+          word-break: break-word;
+        }
+        .blog-filter-banner__text strong {
+          color: var(--common-colour);
+          font-weight: 700;
+          margin-left: 4px;
+        }
+        .blog-filter-banner__clear {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          flex-shrink: 0;
+          font-size: 13px;
+          font-weight: 600;
+          color: var(--common-colour);
+          text-decoration: none;
+          padding: 6px 14px;
+          border: 1.5px solid var(--common-colour);
+          border-radius: 20px;
+          transition: all 0.2s ease;
+          white-space: nowrap;
+        }
+        .blog-filter-banner__clear:hover {
+          background: var(--common-colour);
+          color: #fff;
+        }
+
+        /* Pagination centering */
+        .blog-pagination-nav {
+          display: flex;
+          justify-content: center;
+          margin-top: 10px;
+        }
+
+        .blog-sidebar-search {
+          display: flex;
+        }
+        .blog-sidebar-search input {
+          flex: 1;
+          padding: 12px 16px;
+          border: 1px solid #e0e0e0;
+          border-right: none;
+          background: #fafafa;
+          color: #333;
+          font-size: 14px;
+          outline: none;
+          transition: border-color 0.2s;
+        }
+        .blog-sidebar-search input:focus {
+          border-color: var(--common-colour);
+          background: #fff;
+        }
+        .blog-sidebar-search button {
+          padding: 12px 16px;
+          background: var(--theme-colour);
+          border: none;
+          cursor: pointer;
+          transition: background 0.2s;
+        }
+        .blog-sidebar-search button:hover {
+          background: var(--common-colour);
+          color: #fff;
+        }
+        .blog-sidebar-meta-active {
+          color: var(--common-colour) !important;
+          font-weight: 700;
+        }
+        .blog-sidebar-meta-active:before {
+          background-color: var(--common-colour) !important;
+        }
+        .blog-sidebar-count {
+          float: right;
+          font-size: 13px;
+          font-weight: 600;
+          color: var(--common-colour);
+        }
+        .blog-sidebar-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+        .blog-sidebar-tag {
+          display: inline-block;
+          padding: 6px 14px;
+          font-size: 13px;
+          font-weight: 600;
+          text-decoration: none;
+          border: 1.5px solid #d0d0d0;
+          color: #555;
+          border-radius: 3px;
+          transition: all 0.2s ease;
+        }
+        .blog-sidebar-tag:hover,
+        .blog-sidebar-tag--active {
+          background: var(--common-colour);
+          border-color: var(--common-colour);
+          color: #fff !important;
+        }
+
+        @media (max-width: 991px) {
+          .blog-sidebar-col {
+            margin-top: 40px;
+          }
+        }
+      </style>
     </div>
   </div>
 </section>
