@@ -14,13 +14,21 @@ class ProductInfolist
     public static function configure(Schema $schema): Schema
     {
         return $schema
+            ->columns(1)
             ->components([
                 Section::make('Product Details')
+                    ->icon('heroicon-o-shopping-bag')
                     ->components([
-                        TextEntry::make('title'),
-                        TextEntry::make('slug'),
-                        TextEntry::make('category.name')->label('Category'),
-                        TextEntry::make('tags.name')->label('Tags')->badge(),
+                        Grid::make(2)
+                            ->components([
+                                TextEntry::make('title'),
+                                TextEntry::make('slug'),
+                            ]),
+                        Grid::make(2)
+                            ->components([
+                                TextEntry::make('category.name')->label('Category'),
+                                TextEntry::make('tags.name')->label('Tags')->badge(),
+                            ]),
                         Grid::make(4)
                             ->components([
                                 TextEntry::make('product_code')->placeholder('—'),
@@ -28,17 +36,17 @@ class ProductInfolist
                                 TextEntry::make('product_status')
                                     ->label('Stock Status')
                                     ->formatStateUsing(fn (string $state) => match ($state) {
-                                        'in_stock' => 'In Stock',
+                                        'in_stock'     => 'In Stock',
                                         'out_of_stock' => 'Out of Stock',
-                                        'pre_order' => 'Pre Order',
-                                        default => $state,
+                                        'pre_order'    => 'Pre Order',
+                                        default        => $state,
                                     })
                                     ->badge()
                                     ->color(fn (string $state) => match ($state) {
-                                        'in_stock' => 'success',
+                                        'in_stock'     => 'success',
                                         'out_of_stock' => 'danger',
-                                        'pre_order' => 'warning',
-                                        default => 'gray',
+                                        'pre_order'    => 'warning',
+                                        default        => 'gray',
                                     }),
                                 IconEntry::make('is_active')->boolean()->label('Active'),
                             ]),
@@ -51,6 +59,7 @@ class ProductInfolist
                     ]),
 
                 Section::make('Images')
+                    ->icon('heroicon-o-photo')
                     ->components([
                         ImageEntry::make('main_img')
                             ->disk('public')
@@ -61,18 +70,23 @@ class ProductInfolist
                     ]),
 
                 Section::make('Description')
+                    ->icon('heroicon-o-pencil-square')
                     ->components([
                         TextEntry::make('description')
                             ->html()
+                            ->hiddenLabel()
                             ->columnSpanFull(),
                     ]),
 
                 Section::make('SEO')
-                    ->collapsed()
+                    ->icon('heroicon-o-magnifying-glass')
                     ->components([
-                        TextEntry::make('meta_title')->placeholder('—'),
-                        TextEntry::make('meta_description')->placeholder('—'),
-                        TextEntry::make('meta_keyword')->placeholder('—'),
+                        Grid::make(2)
+                            ->components([
+                                TextEntry::make('meta_title')->placeholder('—'),
+                                TextEntry::make('meta_keyword')->placeholder('—'),
+                            ]),
+                        TextEntry::make('meta_description')->placeholder('—')->columnSpanFull(),
                     ]),
             ]);
     }
