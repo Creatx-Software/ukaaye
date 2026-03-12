@@ -1,54 +1,47 @@
-<style>
-@media (max-width: 991px) {
-    .tf-vision-mission .row > .col-lg-6:first-child {
-        margin-bottom: 24px;
-    }
-}
-</style>
-<section class="tf-section tf-vision-mission">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="title-heading st-2 text-center">
-                    <div class="sub-heading clr-pri-3 f-mulish">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="77" height="30" viewBox="0 0 77 30">
-                            <g>
-                              <image width="77" height="30" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE0AAAAeCAYAAABpE5PpAAAEPklEQVRogd2Ze4hVVRTGf+pNHRtnegxqlonUMJYGY/pXWoFEJpVBTFRDaBbOVmxC/5GUUFJMqQh6MLUjfARBUVGEYi9rqFQU0UrQ8pXvMkcLmbJSZ2TdvlOHy73de+fOmXPv/eCwD+ewz9n7O2utb611enU2NZEGA4F+QFu6m2UF7/PeTe8M17cA48qesC4iHWk3AiOB70tiBzEgHWmfAr8CB8p+911EKmn1wGXAlyWzgxiQStpyjZ+V/c4LQCI0tQKYqPN8SDPia2Wl1wBXSH0D/AYcB3YD3wL7gY64N14IwqRNAi4CjuQgAv2Be3RMkksHOAOcBs6KvEqgT+h+m+LmWuAD4PeiYSNHhEm7S+P6/5l6FTAXeBSoFgGfAJ8D3wG7RFgY9iGuliKPByYA9wMPAu3A28CzwA9xEpEPwqTdprE1zfxLgSeBZrnje8BKWcz5LO8zi9unY62uDQIagNn6AI8AbwHzgYM9S0H+CIRgGDBc51+nPKVBFjQHWK34ZZbyUQ6EZcIvQAswGpgMbJfl2XueSHHnokNA2q0ajwF7dW7C8DrwjoL3GGAG8GM3bqJT5Fv18bDi4TK5+5XFTtp4jZs1mvt8oY2YW96smBUVOmXFo4B1wC0q5cb0PCXZEZAW1JlbFOw3KnDfASwtwA3zxc/A3RKGoUqyb+qhd+eM3hKDGzThkISgWtYVR5JrH2ieRKFSllcfwzoywki7Xm0gwyLgEiW5O2Jem1UnC4Aqxb1hsa7GuRqcszifJO260K0RwL1FQFgAE4VXgMFKhAfEuJYXgT9wLpFQ7AqwSBVB2B0sYz8FnIxnrTwO1Mn6jcBpPb4C5yxMTElmFt6fS2hBAZ7WkQ5nFPMOA3tUR34F7Ix4yeeAB5TLTQU2Aa9G/M5UPARcDLyMRKA9x4kVIrguVD0YjgIfqkpojUhpTyihtue/AGyT0kcP5/oqtqKEPElak9IKc8leoUUMUGFeJRWz43KlAoOUfAbjLB3m2quAJcDf3byhDaoWngPeBcaKzKgxRyLUjPdnCdWeB7tY85mQ1KggNxG5VqT2jYA0w/PK20ys3pfF/xnBe/6Bc1bmPSXvaQkuJ7JMy4YO1ZF2bI1s8f+hU0JQqyrmDdWs3R8SnBuqBkP/ZGfG+397gJn+RhUz2qVkFkvvE3HdW+A7NwT4WB60Hu83hG+XImnop8/t6uc1AmuUlBcO5+qk0KP1Ye5MfWah7hkndqqwX6Ma2RoKj0nJ84dzZkAzgWeUXhxIdn+8/yv1WZn+sJcSTIjelOWhfuBidaBz+RfRT+6+UNaFWlONeH883YRStrQAbfpPMVXdkQlqwf+kuGSu9o1+7nRoz4NF0ES5X5WedULkvRYO/KkoB0sLwxLw6WrLj8x9WrLxugJ4Ce+zJvvlRloYRpq10i1pt6aEJeIWqyxGmdVZzLKqohXvg+ZrdgAXAIwK6LO/4gPOAAAAAElFTkSuQmCC"/>
-                            </g>
-                        </svg>
-                        <span class="inner-sub st-1">Our Purpose</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="77" height="30" viewBox="0 0 77 30">
-                            <g>
-                              <image width="77" height="30" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE0AAAAeCAYAAABpE5PpAAAEMUlEQVRoge2Ze4hVVRTGf46WMyWmZvkaNSWfST7I1EINyVQ0kSxsQiyS3JFo/lGhUQSCJokk5aONhijhHyGRkKTlI3JMFKQaBx2o1HS0klSs66ucGVl3vhOnw73XwblPnQ8OZ+acfc/e+zvr8a11mtXNmsUtDe8T79659sAVvP87eqvo1mYsJR4C9ica0ERaclQBfXFuSHREE2nJ4P0x4BzwdXREE2mp8S3QDucGhUc1kZYa23V3SXhUizxb5I3AXnxPYCDQG+gAtAk9x7Lfb8AvwA/AT0BtA+cJSBuDcyV4f4kCJu1OYAowERgLtA/dqwFiIus2oDVQErp/FtgGbNZxOeks3lfhXDVQCowDPqcASesDvA5MA1rJYvYA5TpbxjsO/Bv5nRHXD3gwbjX1RJcB53HuY+B9vK9OMucO4HlgUkBaocS07sBG4DAwU8TMBjoBo4A3gS1ywShhhr+AfcAakdURmCCLexU4gnPLcK5tgt9+o/PjwYV8J605MF9k2Wa/12YHAKuA0zf4XHPhrbLYXsB6YF58HuemRsaW69wd57qS56R1AXYC7wIWgF+QSrfN1qVtFu+P4v1LwOC4xcEmnFsbD/z1938GTmn0aPKYtMEqYcz1vgQekDWkj6wovK8ARgJv6QXtwrl7NWqfzo+Sp6Q9IlHZGVgKPAn8npWZva/B+0XA+HgJBd/hXGmoBjVLzzvSBsmyLDMuAN5Q/MkuvN8uq7tLieC45h+Acy0C0koiWicX6Kp41VrZcElOV+P9QckTE8rv6Gox0L9IWu0i8EEOl3iHNJCp+dUK/rlHPXFPAT1Ca+lnhF0FLENMllvEcrBYI2qIsuXcnJHl3N3xAr2+4ghQLUtbrP/7BhXBCmA5MB34KMtLfRmYAZwEntVLzDT6K2YNxLleCg3dIuVWMvQJ2t1Wo/0DnADu19/ZwMPAbiWkx1QKZQLN9fyp8qgujZhjTWBpVnrMAT6UMn4vC4TdExeScDvwWoYIs2e/Ld1VGrpeo2ripM4mXs8oNMVUdl1WrA9QF++SeP9r+MNKkSzMCBwKVGZgEwGK1XYxsfgZ8HSGhGsrJZVTittHJR/+/K89lOzDSgqEuxy1KhPKVfyOCJUP6YS5ygYRdlAdhEwp/Zg8KK2Iits9aoV0UwegY4YIe0auMTlH2bpRSFQRTNSGrJOwVz2sdMBE4hfAc3KPJ4BjhUHT/5GItCuq/2xD9wEHgFcaWXKZRVWopjuiQvxQOjaQCyQjwoLlcIlNE3orgR/lVi0buM4idUh3q61sWugrYJj6YwWLVO3uP7RpS68L5a6fKh1vEaGVGndVJHVQ0T1CPfVOetZptak3FDJZAa73jaBWFcInykIvSvyW6bgeqqT91qmReFOgoR9WYtI7dph7mbo2NW8xz6zLXPaCLMpczz6VWYvHSLu5AFwD7u/9V73LPFIAAAAASUVORK5CYII="/>
-                            </g>
-                        </svg>
-                    </div>
-                    <h2 class="title clr-pri-2">Our Vision & Mission</h2>
-                </div>
-            </div>
-        </div>
+<div style="
+      background:var(--common-colour);
+      padding:40px 50px;
+      margin-top:20px;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      position:relative;
+      overflow:hidden;
+    ">
+      {{-- Decorative circles --}}
+      <div style="position:absolute; top:-40px; right:200px; width:150px; height:150px; border-radius:50%; border:2px solid rgba(255,200,11,0.15); pointer-events:none;"></div>
+      <div style="position:absolute; top:-60px; right:160px; width:220px; height:220px; border-radius:50%; border:2px solid rgba(255,200,11,0.08); pointer-events:none;"></div>
 
-        <div class="row">
-            {{-- Left: Vision Card --}}
-            <div class="col-lg-6 col-md-12">
-                <div class="sc-vision-card wow fadeInLeft animated" data-wow-delay="0.3ms" data-wow-duration="1000ms"
-                    style="border: 1px solid #e8e8e8; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); padding: 40px 36px; height: 100%;">
+      <div>
+        <span style="color:var(--theme-colour); font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:3px; display:block; margin-bottom:8px;">
+          Together We Grow
+        </span>
+        <h3 style="color:#fff; font-size:26px; font-weight:800; margin:0; line-height:1.3;">
+          Ready to Work With a Team You Can Trust?
+        </h3>
+      </div>
 
-                    <h4 class="title clr-pri-2" style="margin-bottom: 16px;">Our Vision</h4>
-                    <p class="f-mulish clr-pri-4" style="text-align: justify;">To nurture a healthier, stronger next generation of Sri Lanka by becoming the nation's most trusted natural and organic baby food brand — empowering every child with consistent access to safe, nutritious, and wholesome nourishment from the very start of life.</p>
-                </div>
-            </div>
-
-            {{-- Right: Mission Card --}}
-            <div class="col-lg-6 col-md-12">
-                <div class="sc-mission-card wow fadeInRight animated" data-wow-delay="0.5ms" data-wow-duration="1000ms"
-                    style="border: 1px solid #e8e8e8; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); padding: 40px 36px; height: 100%;">
-
-                    <h4 class="title clr-pri-2" style="margin-bottom: 16px;">Our Mission</h4>
-                    <p class="f-mulish clr-pri-4" style="text-align: justify;">To make high-quality natural and organic baby nutrition accessible to every Sri Lankan family, supporting healthy growth and development without compromising affordability or safety. We are dedicated to sourcing carefully selected ingredients, upholding uncompromising food safety and quality standards, and continuously advancing our formulations.</p>
-                </div>
-            </div>
-        </div>
-
+      <a href="{{ route('contactus') }}" style="
+        display:inline-flex;
+        align-items:center;
+        gap:10px;
+        background:var(--theme-colour);
+        color:var(--common-colour);
+        padding:14px 32px;
+        font-size:15px;
+        font-weight:800;
+        text-decoration:none;
+        flex-shrink:0;
+        transition:opacity 0.3s;
+      "
+      onmouseover="this.style.opacity='0.85'"
+      onmouseout="this.style.opacity='1'">
+        Get In Touch
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--common-colour)" stroke-width="2.5">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
     </div>
-</section>

@@ -15,6 +15,10 @@
    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
    <link rel="stylesheet" href="assets/font/flaticon_mycollection.css">
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="assets/css/flaticon-updated.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
    <!-- style -->
    <link rel="stylesheet" href="assets/css/style.css">
    <!-- responsive -->
@@ -38,23 +42,23 @@
             @include('frontend.components.footer')
             <!-- footer close -->
 
-<!-- search-popup -->
+            <!-- search-popup -->
 
-<!-- search-popup end -->
-<!-- progress -->
-<div id="progress">
-      <span id="progress-value"><i class="fa-solid fa-up-long"></i></span>
-</div>
-<!-- search-popup -->
-<!-- Bootstrap Js -->
-<script src="assets/js/bootstrap.min.js"></script>
-<!-- fancybox -->
-<script src="assets/js/jquery.fancybox.min.js"></script>
-<script src="assets/js/slick.min.js"></script>
-<script src="assets/js/swiper.js"></script>
-<script src="assets/js/sweetalert.min.js"></script> 
-<script src="assets/js/contact.js"></script>
-<script src="assets/js/custom.js"></script>
+            <!-- search-popup end -->
+            <!-- progress -->
+            <div id="progress">
+                <span id="progress-value"><i class="fa-solid fa-up-long"></i></span>
+            </div>
+            <!-- search-popup -->
+            <!-- Bootstrap Js -->
+            <script src="assets/js/bootstrap.min.js"></script>
+            <!-- fancybox -->
+            <script src="assets/js/jquery.fancybox.min.js"></script>
+            <script src="assets/js/slick.min.js"></script>
+            <script src="assets/js/swiper.js"></script>
+            <script src="assets/js/sweetalert.min.js"></script> 
+            <script src="assets/js/contact.js"></script>
+            <script src="assets/js/custom.js"></script>
 
 
 

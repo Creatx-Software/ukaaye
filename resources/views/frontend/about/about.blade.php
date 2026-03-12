@@ -1,53 +1,77 @@
-<section class="tf-section tf-about">
-    <div class="container">
-        <div class="row">
-            <div class="ol-xl-7 col-lg-7 col-md-12">
-                <div class="wrap-image ps-re">
-                    <img src="assets/images/background/bg-aboutus-2.png" alt="" class="bg1-about">
-                    <div class="fx m-b32 align-fl-end">
-                        <div class="image m-r30 wow fadeIn animated" data-wow-delay="0.3ms" data-wow-duration="1200ms">
-                            <img src="assets/images/about/ab1.jpg" alt="Happy baby eating Aromat cereal">
-                        </div>
-                        <div class="image wow fadeIn animated" data-wow-delay="0.3ms" data-wow-duration="1200ms">
-                        <img src="assets/images/about/ab2.jpg" alt="Natural organic ingredients">
-                        </div>
-                    </div>
-                    <div class="image p-l70"><img src="assets/images/about/ab3.jpg" alt="Sri Lankan family with Aromat baby food"></div>
-                    
-                </div>                        
-            </div>
-            <div class="col-xl-5 col-lg-5 col-md-12 col-12">
-                <div class="sc-about-2 p-t19">
-                    <div class="title-heading">
-                        <div class="sub-heading clr-pri-3 f-mulish">
-                            <span class="inner-sub st-2">Our Story</span>
-                            <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="77" height="30" viewBox="0 0 77 30">
-                                <g >
-                                <image  width="77" height="30" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE0AAAAeCAYAAABpE5PpAAAEMUlEQVRoge2Ze4hVVRTGf46WMyWmZvkaNSWfST7I1EINyVQ0kSxsQiyS3JFo/lGhUQSCJokk5aONhijhHyGRkKTlI3JMFKQaBx2o1HS0klSs66ucGVl3vhOnw73XwblPnQ8OZ+acfc/e+zvr8a11mtXNmsUtDe8T79659sAVvP87eqvo1mYsJR4C9ica0ERaclQBfXFuSHREE2nJ4P0x4BzwdXREE2mp8S3QDucGhUc1kZYa23V3SXhUizxb5I3AXnxPYCDQG+gAtAk9x7Lfb8AvwA/AT0BtA+cJSBuDcyV4f4kCJu1OYAowERgLtA/dqwFiIus2oDVQErp/FtgGbNZxOeks3lfhXDVQCowDPqcASesDvA5MA1rJYvYA5TpbxjsO/Bv5nRHXD3gwbjX1RJcB53HuY+B9vK9OMucO4HlgUkBaocS07sBG4DAwU8TMBjoBo4A3gS1ywShhhr+AfcAakdURmCCLexU4gnPLcK5tgt9+o/PjwYV8J605MF9k2Wa/12YHAKuA0zf4XHPhrbLYXsB6YF58HuemRsaW69wd57qS56R1AXYC7wIWgF+QSrfN1qVtFu+P4v1LwOC4xcEmnFsbD/z1938GTmn0aPKYtMEqYcz1vgQekDWkj6wovK8ARgJv6QXtwrl7NWqfzo+Sp6Q9IlHZGVgKPAn8npWZva/B+0XA+HgJBd/hXGmoBjVLzzvSBsmyLDMuAN5Q/MkuvN8uq7tLieC45h+Acy0C0koiWicX6Kp41VrZcElOV+P9QckTE8rv6Gox0L9IWu0i8EEOl3iHNJCp+dUK/rlHPXFPAT1Ca+lnhF0FLENMllvEcrBYI2qIsuXcnJHl3N3xAr2+4ghQLUtbrP/7BhXBCmA5MB34KMtLfRmYAZwEntVLzDT6K2YNxLleCg3dIuVWMvQJ2t1Wo/0DnADu19/ZwMPAbiWkx1QKZQLN9fyp8qgujZhjTWBpVnrMAT6UMn4vC4TdExeScDvwWoYIs2e/Ld1VGrpeo2ripM4mXs8oNMVUdl1WrA9QF++SeP9r+MNKkSzMCBwKVGZgEwGK1XYxsfgZ8HSGhGsrJZVTittHJR/+/K89lOzDSgqEuxy1KhPKVfyOCJUP6YS5ygYRdlAdhEwp/Zg8KK2Iits9aoV0UwegY4YIe0auMTlH2bpRSFQRTNSGrJOwVz2sdMBE4hfAc3KPJ4BjhUHT/5GItCuq/2xD9wEHgFcaWXKZRVWopjuiQvxQOjaQCyQjwoLlcIlNE3orgR/lVi0buM4idUh3q61sWugrYJj6YwWLVO3uP7RpS68L5a6fKh1vEaGVGndVJHVQ0T1CPfVOetZptak3FDJZAa73jaBWFcInykIvSvyW6bgeqqT91qmReFOgoR9WYtI7dph7mbo2NW8xz6zLXPaCLMpczz6VWYvHSLu5AFwD7u/9V73LPFIAAAAASUVORK5CYII="/>
-                                </g>
-                            </svg>
-                        </div>
-                        <h2 class="title clr-pri-2">Pure Nutrition For Sri Lanka's Little Ones
-                        </h2>
-                    </div>
-                    <div class="inner">
-                        <p class="wrap f-mulish clr-pri-4 wow fadeIn animated" data-wow-delay="0.3ms" data-wow-duration="1000ms">
-                            We're a Sri Lankan company founded by parents who understand the struggle to find trusted, affordable baby food. Located in Piliyandala, we create natural, organic meals babies love.
-                        </p>
-                        <h4 class="title-line">No added sugar, salt or preservatives. Ever.</h4>
-                        <ul>
-                            <li class="st-1 fx"><i class="fas fa-check"></i><p class="clr-pri-2">100% Organic</p></li>
-                            <li class="st-2 fx"><i class="fas fa-check"></i><p class="clr-pri-2">Made in Piliyandala</p></li>
-                            <li class="st-3 fx"><i class="fas fa-check"></i><p class="clr-pri-2">100% Natural</p></li>
-                            <li class="st-4 fx"><i class="fas fa-check"></i><p class="clr-pri-2">Affordable For All</p></li>
-                        </ul>
+{{-- Add this ONLY if Font Awesome is not already loaded in your layout --}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-                        <a href="{{ route('about') }}" class="fl-btn st-11">
-                            <span class="inner">Our Story</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>  
+<section class="gap">
+  <div class="container">
+    <div class="heading">
+      <img src="assets/img/heading-img.png" alt="img">
+      <span>Welcome to Ukaaye </span>
+      <h2>Welcome to Ukaaye – Sri Lanka's Trusted Supplier for CATV, CCTV & Fiber Optic Solutions</h2>
     </div>
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="solar-power-save">
+          <p>Since 1960, Ukaaye has been Sri Lanka's most reliable wholesale supplier of CATV, satellite, CCTV, and fiber optic products. We provide complete solutions for installers, dealers, ISPs, apartments, hotels, and businesses nationwide – delivering quality products with technical support and fast service.</p>
+
+          <ul class="list-style">
+            <li>Trusted Quality Brands & Competitive Wholesale Prices</li>
+            <li>Full Technical Guidance & Project Support</li>
+            <li>Nationwide Delivery & Installer-Friendly Service</li>
+          </ul>
+
+          
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="accordion two">
+
+          {{-- 1. Experience & Reliability → medal/award --}}
+          <div class="accordion-item">
+            <a href="#" class="heading">
+              <i class="fa-solid fa-medal"></i>
+              <div class="title">Decades of Experience & Reliability</div>
+            </a>
+            <div class="content">
+              <p>Established in 1960, Ukaaye has grown into Sri Lanka's most trusted name in satellite and CATV distribution. Installers and dealers rely on us for consistent quality and honest service.</p>
+            </div>
+          </div>
+
+          {{-- 2. CATV & Fiber Optic → satellite dish --}}
+          <div class="accordion-item active">
+            <a href="#" class="heading">
+              <i class="fa-solid fa-satellite-dish"></i>
+              <div class="title">Complete CATV & Fiber Optic Solutions</div>
+            </a>
+            <div class="content" style="display: block;">
+              <p>From satellite dishes, LNBFs, and optical nodes to FTTH drop cables, PLC splitters, and full fiber connectivity – we stock everything you need for modern TV and data networks.</p>
+            </div>
+          </div>
+
+          {{-- 3. CCTV & Security → security camera --}}
+          <div class="accordion-item">
+            <a href="#" class="heading">
+              <i class="fa-solid fa-video"></i>
+              <div class="title">Advanced CCTV & Security Systems</div>
+            </a>
+            <div class="content">
+              <p>High-quality analog, IP, and HD cameras, DVRs, NVRs, combo cables, and power supplies. Perfect for homes, apartments, offices, and commercial projects.</p>
+            </div>
+          </div>
+
+          {{-- 4. Tools & Accessories → screwdriver-wrench --}}
+          <div class="accordion-item">
+            <a href="#" class="heading">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+              <div class="title">Tools, Accessories & Nationwide Support</div>
+            </a>
+            <div class="content">
+              <p>Professional tools, connectors, enclosures, cable management, and fast delivery across Sri Lanka. Plus dedicated technical support for every project.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
