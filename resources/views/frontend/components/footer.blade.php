@@ -261,8 +261,8 @@
     </p>
   </div>
   <ul style="list-style: none; padding: 0; margin: 0; display: flex; gap: 24px;">
-    <li><a href="#" style="color: #ccc; text-decoration: none; font-size: 14px;">Privacy Policy</a></li>
-    <li><a href="#" style="color: #ccc; text-decoration: none; font-size: 14px;">Terms & Conditions</a></li>
+    <li><a href="{{ route('privacypolicy') }}" style="color: #ccc; text-decoration: none; font-size: 14px;">Privacy Policy</a></li>
+    <li><a href="{{ route('terms') }}" style="color: #ccc; text-decoration: none; font-size: 14px;">Terms & Conditions</a></li>
     <li><a href="{{ route('about') }}" style="color: #ccc; text-decoration: none; font-size: 14px;">About Us</a></li>
   </ul>
 </div>

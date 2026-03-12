@@ -14,7 +14,8 @@ use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\RouteController;
 use App\Http\Controllers\ServiceController;
-
+use App\Http\Controllers\PrivacyPolicyController;
+use App\Http\Controllers\TermsController;
 
 // Home Page
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -64,6 +65,13 @@ Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout.s
 
 // Services Page
 Route::get('/services', [ServiceController::class, 'index'])->name('services');
+
+// Privacy Policy Page
+Route::get('/privacypolicy', [PrivacyPolicyController::class, 'index'])->name('privacypolicy');
+
+// Terms Page
+Route::get('/terms', [TermsController::class, 'index'])->name('terms');
+
 
 // Catch-all dynamic routes 
 Route::get('/{slug}', [RouteController::class, 'resolve']);
