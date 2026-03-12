@@ -21,7 +21,6 @@
             </div>
           </div>
 
-
           <h2><a href="{{ url($blog->slug) }}">{{ $blog->title }}</a></h2>
 
           <div class="blog-details">
@@ -33,8 +32,7 @@
           <div style="margin-top:24px; display:flex; flex-wrap:wrap; gap:8px; align-items:center;">
             <strong>Tags:</strong>
             @foreach($blog->tags as $tag)
-            <a href="{{ route('blog', ['tag' => $tag->slug]) }}"
-               style="background:#1a1a1a; border:1px solid #333; color:#ccc; padding:4px 12px; font-size:13px; text-decoration:none;">
+            <a href="{{ route('blog', ['tag' => $tag->slug]) }}" class="blog-detail-tag">
               {{ $tag->name }}
             </a>
             @endforeach
@@ -57,10 +55,10 @@
                   <img src="{{ asset('assets/img/bolt-img.png') }}" alt="img" class="bolt-img">
                   <a href="{{ url($related->slug) }}"><i class="flaticon-right-up"></i></a>
                 </div>
-                <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between; padding-top:12px;">
-                  <a href="{{ url($related->slug) }}">{{ $related->title }}</a>
-                  <h5>{{ $related->published_at->format('M d, Y') }}</h5>
-                  <span>{{ $related->category->name ?? 'General' }}</span>
+                <div style="flex:1; display:flex; flex-direction:column; gap:6px; padding-top:12px;">
+                  <a href="{{ url($related->slug) }}" style="font-size:16px; font-weight:700; line-height:22px;">{{ $related->title }}</a>
+                  <h5 style="font-size:13px; font-weight:600; margin:0;">{{ $related->published_at->format('M d, Y') }}</h5>
+                  <span style="font-size:12px; font-weight:600; margin:0;">{{ $related->category->name ?? 'General' }}</span>
                 </div>
               </div>
             </div>
@@ -71,20 +69,15 @@
       </div>
 
       {{-- Sidebar --}}
-      <div class="col-lg-4">
+      <div class="col-lg-4 blog-detail-sidebar-col">
 
         {{-- Search --}}
         <div class="sidebar">
           <h3>Search</h3>
           <form action="{{ route('blog') }}" method="GET">
-            <div style="display:flex; gap:0;">
-              <input type="text" name="search"
-                placeholder="Search blogs..."
-                style="flex:1; padding:10px 14px; border:1px solid #EAEFEF;  flex:1; padding:12px 18px;  background:#ffffff; color:#333333; font-size:14px; outline:none;">
-              <button type="submit"
-                style="padding:10px 16px; background:#f5c518; border:none; cursor:pointer;">
-                <i class="fa-solid fa-magnifying-glass" style="color:#111;"></i>
-              </button>
+            <div class="blog-sidebar-search">
+              <input type="text" name="search" placeholder="Search blogs...">
+              <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
           </form>
         </div>
@@ -100,7 +93,7 @@
                 <img src="{{ $post->image_url }}" alt="{{ $post->title }}" style="width:100%; height:130px; object-fit:cover;">
               </figure>
               @endif
-              <a href="{{ url($post->slug) }}">{{ $post->title }}</a>
+              <a href="{{ url($post->slug) }}" style="font-size:16px; font-weight:600;">{{ $post->title }}</a>
               <h6>{{ $post->published_at->format('M d, Y') }}</h6>
             </li>
             @endforeach
@@ -114,9 +107,9 @@
           <ul class="meta">
             @foreach($categories as $category)
             <li>
-              <a href="{{ route('blog', ['category' => $category->slug]) }}">
+              <a href="{{ route('blog', ['category' => $category->slug]) }}" style="font-size:14px; font-weight:400;">
                 {{ Str::limit($category->name, 25) }}
-                <span style="float:right;">({{ $category->blogs_count }})</span>
+                <span class="blog-sidebar-count">({{ $category->blogs_count }})</span>
               </a>
             </li>
             @endforeach
@@ -128,10 +121,9 @@
         @if($allTags->count())
         <div class="sidebar">
           <h3>Tags</h3>
-          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <div class="blog-sidebar-tags">
             @foreach($allTags as $tag)
-            <a href="{{ route('blog', ['tag' => $tag->slug]) }}"
-               style="background:#1a1a1a; border:1px solid #333; color:#ccc; padding:5px 14px; font-size:13px; text-decoration:none;">
+            <a href="{{ route('blog', ['tag' => $tag->slug]) }}" class="blog-sidebar-tag">
               {{ $tag->name }}
             </a>
             @endforeach
@@ -143,3 +135,87 @@
     </div>
   </div>
 </section>
+
+<style>
+  /* Shared sidebar styles (mirrors blog listing page) */
+  .blog-sidebar-search {
+    display: flex;
+  }
+  .blog-sidebar-search input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #e0e0e0;
+    border-right: none;
+    background: #fafafa;
+    color: #333;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .blog-sidebar-search input:focus {
+    border-color: var(--common-colour);
+    background: #fff;
+  }
+  .blog-sidebar-search button {
+    padding: 12px 16px;
+    background: var(--theme-colour);
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .blog-sidebar-search button:hover {
+    background: var(--common-colour);
+    color: #fff;
+  }
+  .blog-sidebar-count {
+    float: right;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--common-colour);
+  }
+  .blog-sidebar-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .blog-sidebar-tag {
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1.5px solid #d0d0d0;
+    color: #555;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+  }
+  .blog-sidebar-tag:hover {
+    background: var(--common-colour);
+    border-color: var(--common-colour);
+    color: #fff !important;
+  }
+
+  /* Inline post tags */
+  .blog-detail-tag {
+    display: inline-block;
+    padding: 5px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1.5px solid #d0d0d0;
+    color: #555;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+  }
+  .blog-detail-tag:hover {
+    background: var(--common-colour);
+    border-color: var(--common-colour);
+    color: #fff !important;
+  }
+
+  @media (max-width: 991px) {
+    .blog-detail-sidebar-col {
+      margin-top: 40px;
+    }
+  }
+</style>
