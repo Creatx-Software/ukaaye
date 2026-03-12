@@ -19,7 +19,6 @@ class HomeController extends Controller
             ->take(3)
             ->get();
 
-        $homeGalleries = Gallery::where('is_active', true)->take(5)->get();
 
         $homeTestimonials = Testimonial::where('is_active', true)->take(8)->get();
 
@@ -27,6 +26,6 @@ class HomeController extends Controller
 
         $featuredProducts = Product::where('is_active', true)->latest()->take(4)->get();
 
-        return view('frontend.home.index', compact('latestBlogs', 'homeGalleries', 'homeTestimonials', 'homeServices', 'featuredProducts'));
+        return view('frontend.home.index', compact('latestBlogs',  'homeTestimonials', 'homeServices', 'featuredProducts'));
     }
 }
